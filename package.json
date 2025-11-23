@@ -1,0 +1,42 @@
+{
+  "name": "deadly-delivery-codes",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev-with-check.js",
+    "dev:direct": "next dev",
+    "check-port": "node scripts/check-port.js",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "add-code": "node scripts/update-codes.js",
+    "expire-code": "node scripts/update-codes.js expire"
+  },
+  "dependencies": {
+    "next": "^14.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-confetti": "^6.1.0",
+    "lucide-react": "^0.344.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.1",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-toast": "^1.1.5",
+    "next-mdx-remote": "^4.4.1",
+    "date-fns": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.3.0",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "postcss": "^8.4.35",
+    "autoprefixer": "^10.4.18",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.2.0"
+  }
+}
+

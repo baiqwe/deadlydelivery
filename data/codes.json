@@ -1,0 +1,45 @@
+[
+  {
+    "code": "SPOOKY2025",
+    "reward": "500 Coins",
+    "status": "active",
+    "lastChecked": "2025-01-23"
+  },
+  {
+    "code": "DELIVERY100",
+    "reward": "100 Gems",
+    "status": "active",
+    "lastChecked": "2025-01-23"
+  },
+  {
+    "code": "HALLOWEEN2024",
+    "reward": "300 Coins + 50 Gems",
+    "status": "active",
+    "lastChecked": "2025-01-23"
+  },
+  {
+    "code": "NEWYEAR2025",
+    "reward": "250 Coins",
+    "status": "active",
+    "lastChecked": "2025-01-23"
+  },
+  {
+    "code": "WELCOME2025",
+    "reward": "100 Coins",
+    "status": "active",
+    "lastChecked": "2025-01-23"
+  },
+  {
+    "code": "LEGACY123",
+    "reward": "50 Coins",
+    "status": "expired",
+    "lastChecked": "2024-12-15"
+  },
+  {
+    "code": "OLDSCHOOL",
+    "reward": "75 Gems",
+    "status": "expired",
+    "lastChecked": "2024-11-20"
+  }
+]
+
