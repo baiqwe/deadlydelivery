@@ -4,25 +4,29 @@
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
-    --foreground: 120 100% 95%;
-    --card: 0 0% 10%;
-    --card-foreground: 120 100% 95%;
-    --popover: 0 0% 10%;
-    --popover-foreground: 120 100% 95%;
-    --primary: 120 100% 50%;
-    --primary-foreground: 0 0% 7%;
-    --secondary: 0 0% 20%;
-    --secondary-foreground: 120 100% 95%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 120 60% 70%;
-    --accent: 120 100% 50%;
-    --accent-foreground: 0 0% 7%;
+    /* Dark grey-blue background instead of pure black */
+    --background: 222 47% 11%;
+    --foreground: 142 71% 85%;
+    /* Glassmorphism card */
+    --card: 222 47% 8%;
+    --card-foreground: 142 71% 85%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 142 71% 85%;
+    /* More readable toxic green - hsl(142, 71%, 45%) */
+    --primary: 142 71% 45%;
+    --primary-foreground: 222 47% 11%;
+    /* Purple/Violet accent - hsl(262, 83%, 58%) */
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 222 47% 15%;
+    --muted-foreground: 142 71% 65%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 120 100% 50%;
+    --border: 222 47% 20%;
+    --input: 222 47% 20%;
+    --ring: 142 71% 45%;
     --radius: 0.5rem;
   }
 }

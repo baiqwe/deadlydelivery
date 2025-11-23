@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useToast } from "@/components/ui/use-toast"
 import Confetti from "react-confetti"
+import { differenceInDays } from "date-fns"
 import type { Code } from "@/types/code"
 
 interface CodesListProps {
@@ -30,6 +31,12 @@ export function CodesList({ codes }: CodesListProps) {
 
   const activeCodes = codes.filter((code) => code.status === "active")
   const expiredCodes = codes.filter((code) => code.status === "expired")
+
+  const isNewCode = (code: Code) => {
+    const lastCheckedDate = new Date(code.lastChecked)
+    const daysSinceChecked = differenceInDays(new Date(), lastCheckedDate)
+    return daysSinceChecked <= 7 // Mark as "new" if added within last 7 days
+  }
 
   const handleCopy = async (code: string) => {
     try {
@@ -68,7 +75,7 @@ export function CodesList({ codes }: CodesListProps) {
       
       <div className="space-y-6">
         {/* Active Codes */}
-        <Card>
+        <Card className="bg-black/40 backdrop-blur-md border-white/10">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-primary">
               Active Codes ({activeCodes.length})
@@ -79,11 +86,18 @@ export function CodesList({ codes }: CodesListProps) {
               {activeCodes.map((item) => (
                 <div
                   key={item.code}
-                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 rounded-lg border bg-card hover:bg-muted/50 transition-colors"
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 rounded-lg border border-white/10 bg-black/40 backdrop-blur-md hover:bg-black/60 hover:border-white/20 transition-all"
                 >
                   <div className="flex-1">
-                    <div className="font-mono text-lg font-bold text-primary mb-1">
-                      {item.code}
+                    <div className="flex items-center gap-2 mb-1">
+                      <div className="font-mono text-lg font-bold text-primary">
+                        {item.code}
+                      </div>
+                      {isNewCode(item) && (
+                        <span className="px-2 py-0.5 text-xs font-bold bg-secondary text-secondary-foreground rounded-full">
+                          NEW
+                        </span>
+                      )}
                     </div>
                     <div className="text-sm text-muted-foreground">
                       {item.reward}
@@ -91,7 +105,7 @@ export function CodesList({ codes }: CodesListProps) {
                   </div>
                   <Button
                     onClick={() => handleCopy(item.code)}
-                    className="sm:w-auto w-full"
+                    className="sm:w-auto w-full hover:bg-secondary hover:text-secondary-foreground transition-colors"
                     size="sm"
                   >
                     {copiedCode === item.code ? (
