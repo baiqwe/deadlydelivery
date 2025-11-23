@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import codesData from "@/data/codes.json"
+import codesDataRaw from "@/data/codes.json"
 import { CodesList } from "@/components/codes-list"
 import { UpdateBanner } from "@/components/update-banner"
 import { format } from "date-fns"
@@ -8,6 +8,10 @@ import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Gamepad2, Gift, HelpCircle, Settings, CheckCircle2, ChevronRight } from "lucide-react"
+import type { Code } from "@/types/code"
+
+// Type assertion to ensure proper typing
+const codesData = codesDataRaw as Code[]
 
 const activeCodesCount = codesData.filter((code) => code.status === "active").length
 const currentMonth = format(new Date(), "MMMM yyyy")
@@ -128,7 +132,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              Don't get caught by the monsters empty-handed. Grab the latest active codes for 
+              Don&apos;t get caught by the monsters empty-handed. Grab the latest active codes for 
               <strong className="text-primary mx-1">Coins</strong>, 
               <strong className="text-secondary mx-1">Weapons</strong>, and 
               <strong className="text-primary mx-1">Revives</strong> instantly.
@@ -231,7 +235,7 @@ export default function Home() {
                   Why is my code not working?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground text-base pb-4">
-                  Codes expire quickly. If a code doesn't work, it might be expired or typed incorrectly. Codes are usually case-sensitive!
+                  Codes expire quickly. If a code doesn&apos;t work, it might be expired or typed incorrectly. Codes are usually case-sensitive!
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3" className="border border-white/10 rounded-lg bg-card/30 px-4">
