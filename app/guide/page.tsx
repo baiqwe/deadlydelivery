@@ -3,9 +3,15 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://your-domain.vercel.app'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: "Deadly Delivery VR Release Date & Guide | Wiki",
   description: "Learn about Deadly Delivery VR release date, gameplay mechanics, tips and tricks. Your complete guide to mastering Deadly Delivery.",
+  alternates: {
+    canonical: "/guide",
+  },
 }
 
 export default function GuidePage() {

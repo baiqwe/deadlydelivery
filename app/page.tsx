@@ -16,12 +16,19 @@ const codesData = codesDataRaw as Code[]
 const activeCodesCount = codesData.filter((code) => code.status === "active").length
 const currentMonth = format(new Date(), "MMMM yyyy")
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://your-domain.vercel.app'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: `${activeCodesCount} Active Deadly Delivery Codes - ${currentMonth}`,
   description: `Get ${activeCodesCount} active Roblox codes for Deadly Delivery. One-click copy promotional codes and unlock rewards instantly. Updated daily.`,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: `${activeCodesCount} Active Deadly Delivery Codes - ${currentMonth}`,
     description: `Get ${activeCodesCount} active Roblox codes for Deadly Delivery. Updated daily.`,
+    url: baseUrl,
   },
 }
 
