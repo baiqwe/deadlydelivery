@@ -6,7 +6,7 @@ import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://your-domain.vercel.app'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

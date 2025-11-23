@@ -16,7 +16,7 @@ const codesData = codesDataRaw as Code[]
 const activeCodesCount = codesData.filter((code) => code.status === "active").length
 const currentMonth = format(new Date(), "MMMM yyyy")
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://your-domain.vercel.app'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
