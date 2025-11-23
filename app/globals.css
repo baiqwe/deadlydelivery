@@ -4,30 +4,40 @@
 
 @layer base {
   :root {
-    /* Dark grey-blue background instead of pure black */
-    --background: 222 47% 11%;
-    --foreground: 142 71% 85%;
-    /* Glassmorphism card */
-    --card: 222 47% 8%;
-    --card-foreground: 142 71% 85%;
-    --popover: 222 47% 8%;
-    --popover-foreground: 142 71% 85%;
-    /* More readable toxic green - hsl(142, 71%, 45%) */
-    --primary: 142 71% 45%;
-    --primary-foreground: 222 47% 11%;
-    /* Purple/Violet accent - hsl(262, 83%, 58%) */
-    --secondary: 262 83% 58%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 222 47% 15%;
-    --muted-foreground: 142 71% 65%;
-    --accent: 262 83% 58%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 222 47% 20%;
-    --input: 222 47% 20%;
-    --ring: 142 71% 45%;
-    --radius: 0.5rem;
+    /* 背景：极深的蓝黑色，比纯黑更有质感 */
+    --background: 224 71% 4%;
+    /* 文字：灰白色，避免纯白刺眼 */
+    --foreground: 210 40% 98%;
+
+    /* 卡片：深色玻璃拟态 */
+    --card: 224 71% 4%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+
+    /* 主色：修正为更高级的"荧光绿"，饱和度略低，明度高 */
+    --primary: 142 70% 50%;
+    --primary-foreground: 144 100% 5%;
+
+    /* 辅助色：神秘紫，用于中和绿色的单调 */
+    --secondary: 262 80% 50%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* 柔和的边框色 */
+    --muted: 217 19% 27%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 19% 27%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 19% 27%;
+    --input: 217 19% 27%;
+    --ring: 142 70% 50%;
+    --radius: 0.75rem; /* 圆角稍微大一点，更现代 */
   }
 }
 
@@ -37,6 +47,11 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* 添加一个径向渐变背景，模拟中心光照/迷雾效果 */
+    background-image: 
+      radial-gradient(circle at 50% 0%, hsl(262, 80%, 20%, 0.4) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(142, 70%, 10%, 0.2) 0%, transparent 30%);
+    background-attachment: fixed; /* 背景固定，滚动时更有层次感 */
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -52,6 +67,9 @@
 
 .font-horror {
   font-family: 'Creepster', cursive;
+  letter-spacing: 0.05em;
+  /* 给标题加一点文字阴影，增强恐怖感 */
+  text-shadow: 0 2px 10px rgba(34, 197, 94, 0.5);
 }
 
 body {
@@ -122,5 +140,21 @@ body {
 
 .slide-out-to-right-full {
   animation: slide-out-to-right-full 0.3s ease-in;
+}
+
+/* Additional animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
 }
 
