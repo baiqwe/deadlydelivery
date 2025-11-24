@@ -8,35 +8,56 @@ interface CommentsProps {
 
 export function Comments({ term = "deadly-delivery-codes" }: CommentsProps) {
   const commentsRef = useRef<HTMLDivElement>(null)
+  const walineRef = useRef<any>(null)
 
   useEffect(() => {
-    // Only load Giscus on client side
+    // Only load Waline on client side
     if (typeof window !== "undefined" && commentsRef.current) {
-      const script = document.createElement("script")
-      script.src = "https://giscus.app/client.js"
-      script.setAttribute("data-repo", "baiqwe/deadlydelivery")
-      script.setAttribute("data-repo-id", "R_kgDOQba3mg")
-      script.setAttribute("data-category", "Announcements")
-      script.setAttribute("data-category-id", "DIC_kwDOQba3ms4Cy2-t")
-      script.setAttribute("data-mapping", "pathname")
-      script.setAttribute("data-strict", "0")
-      script.setAttribute("data-reactions-enabled", "1")
-      script.setAttribute("data-emit-metadata", "0")
-      script.setAttribute("data-input-position", "top")
-      script.setAttribute("data-theme", "dark")
-      script.setAttribute("data-lang", "en")
-      script.setAttribute("crossorigin", "anonymous")
-      script.async = true
+      // Dynamically import Waline to avoid SSR issues
+      import('@waline/client').then((Waline) => {
+        // Clean up previous instance
+        if (walineRef.current) {
+          walineRef.current.destroy()
+        }
 
-      // Clear existing content and append script
-      commentsRef.current.innerHTML = ""
-      commentsRef.current.appendChild(script)
+        // Get server URL from environment or use official demo
+        const serverURL = process.env.NEXT_PUBLIC_WALINE_SERVER_URL || 'https://waline.js.org'
+
+        // Initialize Waline
+        walineRef.current = Waline.init({
+          el: commentsRef.current,
+          serverURL: serverURL,
+          path: window.location.pathname,
+          dark: 'body.dark',
+          locale: {
+            placeholder: 'Share your thoughts, report expired codes, or ask for help... (You can comment anonymously!)'
+          },
+          requiredMeta: [], // Allow completely anonymous comments (no required fields)
+          login: 'enable', // Optional: allow users to login with GitHub/Twitter for better identity
+          pageSize: 10,
+          lang: 'en',
+          emoji: [
+            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/weibo',
+            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili',
+          ],
+          reaction: true, // Enable reactions
+        })
+      }).catch((error) => {
+        console.error('Failed to load Waline:', error)
+        if (commentsRef.current) {
+          commentsRef.current.innerHTML = `
+            <div class="text-center py-8 text-muted-foreground">
+              <p>Comments are loading... If this persists, please refresh the page.</p>
+            </div>
+          `
+        }
+      })
 
       return () => {
         // Cleanup
-        const currentRef = commentsRef.current
-        if (currentRef) {
-          currentRef.innerHTML = ""
+        if (walineRef.current) {
+          walineRef.current.destroy()
+          walineRef.current = null
         }
       }
     }
@@ -49,11 +70,11 @@ export function Comments({ term = "deadly-delivery-codes" }: CommentsProps) {
         Community Discussion
       </h2>
       <p className="text-muted-foreground mb-6">
-        Share your experience, report expired codes, or ask for help. All comments are powered by GitHub Discussions.
+        Share your experience, report expired codes, or ask for help. <strong className="text-foreground">You can comment anonymously - no login required!</strong> Or optionally login with GitHub/Twitter for better identity recognition.
       </p>
       <div ref={commentsRef} className="min-h-[200px]" />
       <p className="text-xs text-muted-foreground/60 mt-4">
-        💡 <strong>Tip:</strong> You need a GitHub account to comment. Comments help other players find working codes!
+        💡 <strong>Tip:</strong> Comments are saved permanently. You can comment anonymously or login for a verified identity!
       </p>
     </div>
   )
