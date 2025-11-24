@@ -120,7 +120,7 @@ export default function Home() {
                 className="bg-primary text-black hover:bg-primary/90 font-bold"
               >
                 <a 
-                  href="https://www.roblox.com/games/search?keyword=Deadly%20Delivery" 
+                  href="https://www.roblox.com/games/125810438250765/Deadly-Delivery" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
