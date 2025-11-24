@@ -15,14 +15,14 @@ export function Comments({ term = "deadly-delivery-codes" }: CommentsProps) {
       const script = document.createElement("script")
       script.src = "https://giscus.app/client.js"
       script.setAttribute("data-repo", "baiqwe/deadlydelivery")
-      script.setAttribute("data-repo-id", "R_kgDOLhXXXXX") // You'll need to get this from GitHub
+      script.setAttribute("data-repo-id", "R_kgDOQba3mg")
       script.setAttribute("data-category", "Announcements")
-      script.setAttribute("data-category-id", "DIC_kwDOLhXXXXX") // You'll need to get this from GitHub
+      script.setAttribute("data-category-id", "DIC_kwDOQba3ms4Cy2-t")
       script.setAttribute("data-mapping", "pathname")
       script.setAttribute("data-strict", "0")
       script.setAttribute("data-reactions-enabled", "1")
       script.setAttribute("data-emit-metadata", "0")
-      script.setAttribute("data-input-position", "bottom")
+      script.setAttribute("data-input-position", "top")
       script.setAttribute("data-theme", "dark")
       script.setAttribute("data-lang", "en")
       script.setAttribute("crossorigin", "anonymous")
