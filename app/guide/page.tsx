@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { SocialShare } from "@/components/social-share"
-import { Comments } from "@/components/comments"
+// import { Comments } from "@/components/comments" // Temporarily hidden
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
 
@@ -113,8 +113,8 @@ export default function GuidePage() {
           <SocialShare title="Deadly Delivery Guide & Wiki" />
         </div>
 
-        {/* Comments Section */}
-        <Comments term="deadly-delivery-guide" />
+        {/* Comments Section - Temporarily hidden */}
+        {/* <Comments term="deadly-delivery-guide" /> */}
       </main>
 
       {/* Footer */}

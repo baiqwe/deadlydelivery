@@ -9,7 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Gamepad2, Gift, HelpCircle, Settings, CheckCircle2, ChevronRight } from "lucide-react"
 import { SocialShare } from "@/components/social-share"
-import { Comments } from "@/components/comments"
+// import { Comments } from "@/components/comments" // Temporarily hidden
 import type { Code } from "@/types/code"
 
 // Type assertion to ensure proper typing
@@ -299,10 +299,10 @@ export default function Home() {
             </Accordion>
           </div>
 
-          {/* Comments Section */}
-          <div className="max-w-3xl mx-auto">
+          {/* Comments Section - Temporarily hidden */}
+          {/* <div className="max-w-3xl mx-auto">
             <Comments />
-          </div>
+          </div> */}
         </main>
 
         <footer className="border-t border-white/10 bg-black/40 py-12 mt-12">
