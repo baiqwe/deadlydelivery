@@ -49,10 +49,10 @@ function generateSchema() {
       },
       {
         "@type": "Question",
-        "name": "How do I redeem Deadly Delivery codes?",
+        "name": "Why is my code not working?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "To redeem codes in Deadly Delivery, open the game, click the Settings (Gear icon) at the top, find the code redemption text box, paste the code, and press Redeem. The rewards will be added to your account instantly."
+          "text": "Codes expire quickly. If a code doesn't work, it might be expired or typed incorrectly. Codes are usually case-sensitive!"
         }
       },
       {
