@@ -2,6 +2,9 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Breadcrumbs } from "@/components/breadcrumbs"
+import { SocialShare } from "@/components/social-share"
+import { Comments } from "@/components/comments"
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
 
@@ -39,6 +42,8 @@ export default function GuidePage() {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8 max-w-4xl">
+        <Breadcrumbs items={[{ label: "Guide" }]} />
+        
         <article className="prose prose-invert max-w-none">
           <h2 className="text-3xl font-bold text-primary mb-4">
             Deadly Delivery VR Release Date & Guide
@@ -81,7 +86,7 @@ export default function GuidePage() {
               <ol className="list-decimal pl-6 space-y-2">
                 <li>Launch Deadly Delivery on Roblox</li>
                 <li>Find the codes or coupon section in the game menu</li>
-                <li>Copy a code from this website using the COPY button</li>
+                <li>Copy a code from our <Link href="/" className="text-primary hover:underline font-medium">latest codes page</Link> using the COPY button</li>
                 <li>Paste the code into the redemption field</li>
                 <li>Click redeem and enjoy your rewards!</li>
               </ol>
@@ -89,15 +94,27 @@ export default function GuidePage() {
           </div>
 
           <div className="mt-12 p-6 bg-card border border-border rounded-lg">
-            <h3 className="text-xl font-semibold text-foreground mb-2">Need More Codes?</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-2">Ready to Get Codes?</h3>
             <p className="text-muted-foreground mb-4">
-              Check out our active codes page for the latest promotional codes and rewards.
+              Now that you know how to redeem codes, check out our{" "}
+              <Link href="/" className="text-primary hover:underline font-medium">
+                latest active Deadly Delivery codes
+              </Link>{" "}
+              and start collecting rewards!
             </p>
             <Link href="/">
-              <Button>View All Codes</Button>
+              <Button className="w-full sm:w-auto">View Active Codes</Button>
             </Link>
           </div>
         </article>
+
+        {/* Social Share */}
+        <div className="mt-12">
+          <SocialShare title="Deadly Delivery Guide & Wiki" />
+        </div>
+
+        {/* Comments Section */}
+        <Comments term="deadly-delivery-guide" />
       </main>
 
       {/* Footer */}

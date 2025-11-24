@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Gamepad2, Gift, HelpCircle, Settings, CheckCircle2, ChevronRight } from "lucide-react"
+import { SocialShare } from "@/components/social-share"
+import { Comments } from "@/components/comments"
 import type { Code } from "@/types/code"
 
 // Type assertion to ensure proper typing
@@ -113,8 +115,17 @@ export default function Home() {
                   Wiki Guide
                 </Button>
               </Link>
-              <Button className="bg-primary text-black hover:bg-primary/90 font-bold">
-                Play Now
+              <Button 
+                asChild
+                className="bg-primary text-black hover:bg-primary/90 font-bold"
+              >
+                <a 
+                  href="https://www.roblox.com/games/search?keyword=Deadly%20Delivery" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Play Now
+                </a>
               </Button>
             </nav>
           </div>
@@ -156,6 +167,38 @@ export default function Home() {
           
           <div className="max-w-3xl mx-auto">
             <CodesList codes={codesData} />
+            
+            {/* Social Share */}
+            <div className="mt-8">
+              <SocialShare title="Deadly Delivery Codes" />
+            </div>
+
+            {/* Internal Link to Guide */}
+            <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-primary/20 transition-all duration-300 mt-8">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-primary/10 text-primary shrink-0">
+                    <HelpCircle className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold mb-2">Need Help?</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Don&apos;t know how to redeem codes? Check out our complete{" "}
+                      <Link href="/guide" className="text-primary hover:underline font-medium">
+                        Deadly Delivery Guide & Wiki
+                      </Link>{" "}
+                      with step-by-step instructions, gameplay tips, and more!
+                    </p>
+                    <Link href="/guide">
+                      <Button variant="outline" size="sm">
+                        View Guide
+                        <ChevronRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* SEO Content Grid - 更加精良的排版 */}
@@ -254,6 +297,11 @@ export default function Home() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+          </div>
+
+          {/* Comments Section */}
+          <div className="max-w-3xl mx-auto">
+            <Comments />
           </div>
         </main>
 

@@ -8,6 +8,7 @@ import Confetti from "react-confetti"
 import { differenceInDays } from "date-fns"
 import type { Code } from "@/types/code"
 import { cn } from "@/lib/utils"
+import { CodeVote } from "./code-vote"
 
 interface CodesListProps {
   codes: Code[]
@@ -115,10 +116,11 @@ export function CodesList({ codes }: CodesListProps) {
                         </span>
                       )}
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
                       <Gift className="w-4 h-4 text-gray-500" />
                       <span className="truncate font-medium">{item.reward}</span>
                     </div>
+                    <CodeVote code={item.code} />
                   </div>
 
                   {/* Action Button */}
