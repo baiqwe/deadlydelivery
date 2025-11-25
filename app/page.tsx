@@ -35,71 +35,135 @@ export const metadata: Metadata = {
 }
 
 function generateSchema() {
-  const activeCodes = codesData.filter((code) => code.status === "active")
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
   
+  // FAQPage Schema - Single, well-structured schema
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What are Deadly Delivery codes?",
+        "name": "How do I redeem Deadly Delivery codes?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Deadly Delivery codes are promotional codes released by the game developers that players can redeem for free rewards like coins, Revive Syringes, Z-Ray Guns, Baseball Bats, and Pumpkins to help you survive monsters and complete delivery missions."
+          "text": "To redeem codes in Deadly Delivery, open the game on Roblox, click the Settings (Gear icon) at the top, find the code redemption text box, paste the code, and press Redeem. The rewards will be added to your account instantly."
         }
       },
       {
         "@type": "Question",
-        "name": "Why is my code not working?",
+        "name": "What are the latest Deadly Delivery codes?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Codes expire quickly. If a code doesn't work, it might be expired or typed incorrectly. Codes are usually case-sensitive!"
+          "text": "The latest active Deadly Delivery codes are updated daily on our website. These codes provide free rewards including coins, Revive Syringes, Z-Ray Guns, Baseball Bats, and seasonal items. Check our active codes section for the most up-to-date list."
         }
       },
       {
         "@type": "Question",
-        "name": "How often are new codes released?",
+        "name": "Why isn't my Deadly Delivery code working?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "New Deadly Delivery codes are typically released during special events, holidays, or game updates. We update our list daily to ensure you have access to the latest active codes."
+          "text": "Codes may expire quickly or be case-sensitive. Make sure you're typing the code exactly as shown, including capital letters. If a code doesn't work, it may have expired. Check our expired codes section and try one of our verified active codes instead."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often are new Deadly Delivery codes released?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "New Deadly Delivery codes are typically released during special events, holidays, milestones, or game updates. We update our code list daily to ensure you have access to the latest active codes as soon as they become available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What rewards can I get from Deadly Delivery codes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Deadly Delivery codes provide various rewards including coins for upgrades, Revive Syringes to recover health, Z-Ray Guns and other weapons for combat, Baseball Bats for defense, and seasonal items like Pumpkins. These rewards help players survive monsters and complete delivery missions."
         }
       }
     ]
   }
 
+  // VideoGame Schema - Enhanced with more details
   const gameSchema = {
     "@context": "https://schema.org",
     "@type": "VideoGame",
     "name": "Deadly Delivery",
-    "description": "Deadly Delivery is a Roblox game where players experience thrilling delivery adventures. Redeem codes to get free rewards and enhance your gameplay.",
-    "applicationCategory": "Game",
+    "description": "Deadly Delivery is a thrilling Roblox game where players experience exciting delivery adventures through spooky environments. Redeem codes to get free rewards and enhance your gameplay experience.",
+    "applicationCategory": "GameApplication",
+    "applicationSubCategory": "Roblox Game",
     "operatingSystem": "Roblox",
+    "gamePlatform": ["Roblox"],
+    "genre": ["Adventure", "Horror", "Survival"],
     "offers": {
       "@type": "Offer",
       "price": "0",
-      "priceCurrency": "USD"
-    }
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.roblox.com/games/125810438250765/Deadly-Delivery"
+    },
+    "image": `${baseUrl}/icon-512.png`
+  }
+
+  // BreadcrumbList Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": baseUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Games",
+        "item": `${baseUrl}/#games`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Deadly Delivery",
+        "item": baseUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Codes",
+        "item": baseUrl
+      }
+    ]
   }
 
   return {
     faqSchema,
-    gameSchema
+    gameSchema,
+    breadcrumbSchema
   }
 }
 
 export default function Home() {
-  const { faqSchema, gameSchema } = generateSchema()
+  const { faqSchema, gameSchema, breadcrumbSchema } = generateSchema()
 
   return (
     <>
+      {/* Single FAQPage Schema - No duplicates */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      {/* VideoGame Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(gameSchema) }}
+      />
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
       <div className="min-h-screen flex flex-col">

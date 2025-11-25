@@ -18,8 +18,46 @@ export const metadata: Metadata = {
 }
 
 export default function GuidePage() {
+  // Generate Breadcrumb Schema for guide page
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": baseUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Games",
+        "item": `${baseUrl}/#games`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Deadly Delivery",
+        "item": baseUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Guide",
+        "item": `${baseUrl}/guide`
+      }
+    ]
+  }
+
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border">
         <div className="container mx-auto px-4 py-6">
@@ -126,7 +164,8 @@ export default function GuidePage() {
           </p>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   )
 }
 
