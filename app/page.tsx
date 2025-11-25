@@ -34,55 +34,37 @@ export const metadata: Metadata = {
   },
 }
 
+// ✅ 统一 FAQ 数据 - 确保 Schema 和 UI 完全一致
+const FAQ_DATA = [
+  {
+    question: "What are Deadly Delivery codes?",
+    answer: "Deadly Delivery codes are promotional coupons released by the developers (Flat Head Studio). They grant free in-game rewards instantly like coins, Revive Syringes, Z-Ray Guns, and exclusive items to help you survive."
+  },
+  {
+    question: "Why is my code not working?",
+    answer: "Codes expire quickly. If a code doesn't work, it might be expired or typed incorrectly. Codes are usually case-sensitive!"
+  },
+  {
+    question: "How often are new codes released?",
+    answer: "New Deadly Delivery codes are typically released during special events, holidays, or game updates. We update our list daily to ensure you have access to the latest active codes."
+  }
+]
+
 function generateSchema() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
   
-  // FAQPage Schema - Single, well-structured schema
+  // FAQPage Schema - Generated from FAQ_DATA to ensure consistency with UI
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I redeem Deadly Delivery codes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To redeem codes in Deadly Delivery, open the game on Roblox, click the Settings (Gear icon) at the top, find the code redemption text box, paste the code, and press Redeem. The rewards will be added to your account instantly."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the latest Deadly Delivery codes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The latest active Deadly Delivery codes are updated daily on our website. These codes provide free rewards including coins, Revive Syringes, Z-Ray Guns, Baseball Bats, and seasonal items. Check our active codes section for the most up-to-date list."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why isn't my Deadly Delivery code working?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Codes may expire quickly or be case-sensitive. Make sure you're typing the code exactly as shown, including capital letters. If a code doesn't work, it may have expired. Check our expired codes section and try one of our verified active codes instead."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How often are new Deadly Delivery codes released?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "New Deadly Delivery codes are typically released during special events, holidays, milestones, or game updates. We update our code list daily to ensure you have access to the latest active codes as soon as they become available."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What rewards can I get from Deadly Delivery codes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Deadly Delivery codes provide various rewards including coins for upgrades, Revive Syringes to recover health, Z-Ray Guns and other weapons for combat, Baseball Bats for defense, and seasonal items like Pumpkins. These rewards help players survive monsters and complete delivery missions."
-        }
+    "mainEntity": FAQ_DATA.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
       }
-    ]
+    }))
   }
 
   // VideoGame Schema - Enhanced with more details
@@ -148,22 +130,15 @@ function generateSchema() {
 export default function Home() {
   const { faqSchema, gameSchema, breadcrumbSchema } = generateSchema()
 
+  // ✅ 合并所有 Schema 为一个 JSON-LD 数组（修复重复问题）
+  const jsonLd = [faqSchema, gameSchema, breadcrumbSchema]
+
   return (
     <>
-      {/* Single FAQPage Schema - No duplicates */}
+      {/* ✅ 修复：合并为一个 script 标签，避免重复定义错误 */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      {/* VideoGame Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(gameSchema) }}
-      />
-      {/* BreadcrumbList Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
       <div className="min-h-screen flex flex-col">
@@ -336,30 +311,17 @@ export default function Home() {
             </div>
             
             <Accordion type="single" collapsible className="w-full space-y-4">
-              <AccordionItem value="item-1" className="border border-white/10 rounded-lg bg-card/30 px-4">
-                <AccordionTrigger className="text-lg font-medium hover:no-underline hover:text-primary">
-                  What are Deadly Delivery codes?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-base pb-4">
-                  Deadly Delivery codes are promotional coupons released by the developers (Flat Head Studio). They grant free in-game rewards instantly.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2" className="border border-white/10 rounded-lg bg-card/30 px-4">
-                <AccordionTrigger className="text-lg font-medium hover:no-underline hover:text-primary">
-                  Why is my code not working?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-base pb-4">
-                  Codes expire quickly. If a code doesn&apos;t work, it might be expired or typed incorrectly. Codes are usually case-sensitive!
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3" className="border border-white/10 rounded-lg bg-card/30 px-4">
-                <AccordionTrigger className="text-lg font-medium hover:no-underline hover:text-primary">
-                  How often are new codes released?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-base pb-4">
-                  New Deadly Delivery codes are typically released during special events, holidays, or game updates. We update our list daily to ensure you have access to the latest active codes.
-                </AccordionContent>
-              </AccordionItem>
+              {/* ✅ 使用 FAQ_DATA 渲染，确保 UI 与 Schema 完全一致 */}
+              {FAQ_DATA.map((item, index) => (
+                <AccordionItem key={index} value={`item-${index + 1}`} className="border border-white/10 rounded-lg bg-card/30 px-4">
+                  <AccordionTrigger className="text-lg font-medium hover:no-underline hover:text-primary text-left">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground text-base pb-4">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
             </Accordion>
           </div>
 
