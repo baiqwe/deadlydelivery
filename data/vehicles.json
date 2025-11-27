@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Delivery Van",
+    "speed": "Medium",
+    "durability": "High",
+    "capacity": "Large",
+    "price": 10000,
+    "acquisition": "Shop",
+    "tier": "A",
+    "description": "Standard delivery vehicle. Balanced speed and cargo capacity. Perfect for most delivery missions."
+  },
+  {
+    "name": "Sports Car",
+    "speed": "Very High",
+    "durability": "Low",
+    "capacity": "Small",
+    "price": 15000,
+    "acquisition": "Shop",
+    "tier": "B",
+    "description": "Fast but fragile. Great for quick deliveries but limited cargo space."
+  },
+  {
+    "name": "Truck",
+    "speed": "Low",
+    "durability": "Very High",
+    "capacity": "Very Large",
+    "price": 20000,
+    "acquisition": "Shop",
+    "tier": "A",
+    "description": "Heavy-duty vehicle. Can carry massive amounts of cargo but slower speed."
+  }
+]
+

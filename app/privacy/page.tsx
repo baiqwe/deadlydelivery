@@ -19,23 +19,6 @@ export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b border-white/10 bg-black/20 backdrop-blur-xl sticky top-0 z-50">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl font-horror text-primary drop-shadow-md">DeadlyBlox</span>
-            </div>
-          </Link>
-          <nav className="flex items-center gap-4">
-            <Link href="/">
-              <Button variant="ghost" className="text-muted-foreground hover:text-primary hover:bg-primary/10">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Home
-              </Button>
-            </Link>
-          </nav>
-        </div>
-      </header>
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12 max-w-4xl">

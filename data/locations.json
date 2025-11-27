@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "delivery-hub",
+    "name": "Delivery Hub",
+    "type": "Safe Zone",
+    "description": "The main starting location where players spawn. Safe from threats and contains the shop and code redemption area.",
+    "features": ["Shop", "Code Redemption", "Safe Zone"]
+  },
+  {
+    "slug": "haunted-streets",
+    "name": "Haunted Streets",
+    "type": "Danger Zone",
+    "description": "Dark streets filled with monsters. High risk but contains valuable loot and delivery packages.",
+    "features": ["High Risk", "Valuable Loot", "Monster Spawns"]
+  },
+  {
+    "slug": "abandoned-warehouse",
+    "name": "Abandoned Warehouse",
+    "type": "Danger Zone",
+    "description": "An old warehouse with hidden secrets and rare items. Requires careful navigation.",
+    "features": ["Rare Items", "Hidden Secrets", "Puzzle Elements"]
+  }
+]
+

@@ -1,0 +1,69 @@
+[
+  {
+    "id": "quest-001",
+    "title": "Unlock Baseballer",
+    "type": "Class Unlock",
+    "difficulty": "Easy",
+    "description": "Prove your worth as a fighter to unlock the Baseballer class.",
+    "objectives": [
+      "Deal 1000 damage with a Baseball Bat",
+      "Earn 12,000 Coins"
+    ],
+    "rewards": {
+      "coins": 0,
+      "items": ["Baseballer Class"]
+    },
+    "location": "Lobby"
+  },
+  {
+    "id": "quest-002",
+    "title": "Unlock Porter",
+    "type": "Class Unlock",
+    "difficulty": "Medium",
+    "description": "Show your endurance to become a Porter.",
+    "objectives": [
+      "Move 3500 feet in total",
+      "Earn 30,000 Coins"
+    ],
+    "rewards": {
+      "coins": 0,
+      "items": ["Porter Class"]
+    },
+    "location": "Lobby"
+  },
+  {
+    "id": "quest-003",
+    "title": "Survive the Deep",
+    "type": "Main Objective",
+    "difficulty": "Hard",
+    "description": "Reach deeper floors to find rarer monsters and loot.",
+    "objectives": [
+      "Vote 'Deep' at the elevator",
+      "Reach Floor 6+",
+      "Encounter the Bloomaw"
+    ],
+    "rewards": {
+      "coins": 5000,
+      "items": ["High Value Food"]
+    },
+    "location": "Floor 6+"
+  },
+  {
+    "id": "quest-004",
+    "title": "Crocodile Hunter",
+    "type": "Side Challenge",
+    "difficulty": "Extreme",
+    "description": "Steal the egg and survive the hunt.",
+    "objectives": [
+      "Find the Crocodile Nest",
+      "Steal the Crocodile Egg",
+      "Kill the Crocodile or Escape"
+    ],
+    "rewards": {
+      "coins": 1000,
+      "items": ["Crocodile Egg"]
+    },
+    "location": "Sewer Nest"
+  }
+]
+

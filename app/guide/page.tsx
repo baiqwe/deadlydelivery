@@ -58,25 +58,15 @@ export default function GuidePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center gap-4 mb-4">
-            <Link href="/">
-              <Button variant="ghost" size="sm">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Codes
-              </Button>
-            </Link>
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-horror text-primary mb-2">
-            Deadly Delivery Guide
-          </h1>
-          <p className="text-xl text-muted-foreground">
-            Wiki & Game Information
-          </p>
-        </div>
-      </header>
+      
+      <div className="container mx-auto px-4 py-6 border-b border-border">
+        <h1 className="text-4xl sm:text-5xl font-horror text-primary mb-2">
+          Deadly Delivery Guide
+        </h1>
+        <p className="text-xl text-muted-foreground">
+          Wiki & Game Information
+        </p>
+      </div>
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8 max-w-4xl">

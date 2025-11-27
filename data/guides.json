@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "monster-bestiary",
+    "title": "Complete Monster Bestiary & Strategy",
+    "category": "Combat",
+    "difficulty": "All Levels",
+    "author": "WTHHHELL BRO Wiki",
+    "lastUpdated": "2025-11-27",
+    "description": "A comprehensive guide to every entity in the sewers, from the Pit Maw to the deadly Bloomaw.",
+    "content": [
+      {
+        "section": "The Bloomaw (New!)",
+        "text": "Appears as an innocent black cat but transforms into a violent monster. It jumps on the closest person. Counter: Flash your light on it immediately to stop the attack. Found after Floor 6."
+      },
+      {
+        "section": "Pit Maw",
+        "text": "A stationary trap monster emerging from the floor. Deals 30 damage and stuns. Counter: Drop a large item into its mouth or hit it with a Baseball Bat/Shotgun."
+      },
+      {
+        "section": "The Forsaken",
+        "text": "Deals 40 damage instantly if it spots you. Strategy: Stare at it continuously to stun it. Do not break line of sight or it will charge."
+      },
+      {
+        "section": "Mimic (Human)",
+        "text": "Disguises itself as another player. If you get too close, it attacks (20 dmg). Strategy: Keep distance. If it wanders aimlessly, it's likely a mimic."
+      },
+      {
+        "section": "Fridge Mimic",
+        "text": "Hides as a fridge. Deals 20 damage when opened from the front. Strategy: Always open fridges from the side."
+      }
+    ],
+    "tags": ["monsters", "enemies", "strategy", "survival"]
+  },
+  {
+    "slug": "class-unlock-guide",
+    "title": "Class Unlock Requirements",
+    "category": "Progression",
+    "difficulty": "Intermediate",
+    "author": "Delivery Goblin",
+    "lastUpdated": "2025-11-27",
+    "description": "How to unlock the Baseballer, Porter, and Veteran classes.",
+    "content": [
+      {
+        "section": "Baseballer",
+        "text": "Requirement: Deal 1000 damage with a baseball bat and pay $12,000 coins. Bonus: Starts with a Baseball Bat."
+      },
+      {
+        "section": "Porter",
+        "text": "Requirement: Move 3500 feet total distance and pay $30,000 coins. Passive: Likely increased carrying capacity or speed."
+      },
+      {
+        "section": "Veteran",
+        "text": "A high-tier class associated with the Shotgun. Requires significant gameplay progression and currency to unlock."
+      }
+    ],
+    "tags": ["classes", "unlocks", "progression"]
+  },
+  {
+    "slug": "beginners-guide",
+    "title": "Beginner's Survival Guide",
+    "category": "Basics",
+    "difficulty": "Beginner",
+    "author": "Wiki Team",
+    "lastUpdated": "2025-11-27",
+    "description": "Understanding the Elevator system, Money Bar, and Extraction.",
+    "content": [
+      {
+        "section": "The Objective",
+        "text": "Your goal is to scavenge food items to fill the 'Money Bar' at the top of the screen. Once full, return to the elevator."
+      },
+      {
+        "section": "Deep vs. Evacuate",
+        "text": "At the elevator, the team votes. 'Deep' takes you to a harder, deeper level with better loot. 'Evacuate' ends the run and banks your cash."
+      },
+      {
+        "section": "Inventory Management",
+        "text": "You have limited slots (4). You must frequently return to the elevator to drop off items. If you die, you are evacuated but keep your items."
+      }
+    ],
+    "tags": ["beginner", "tutorial", "basics"]
+  }
+]

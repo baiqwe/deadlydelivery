@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "baseball-bat",
+    "name": "Baseball Bat",
+    "location": "Starter (Baseballer Class) / Codes",
+    "type": "Melee Weapon",
+    "description": "A reliable melee weapon effective against most entities. Can be used to stun the Pit Maw or kill aggressive Mimics.",
+    "stats": {
+      "rarity": "Common",
+      "damage": "Moderate",
+      "effect": "Stun"
+    }
+  },
+  {
+    "slug": "z-ray-gun",
+    "name": "Z-Ray Gun",
+    "location": "Codes (DEADLYDELIVERY)",
+    "type": "Ranged Weapon",
+    "description": "A futuristic utility tool. While its damage output is unspecified, it is essential for stunning enemies or revealing hidden entities in the dark.",
+    "stats": {
+      "rarity": "Rare",
+      "type": "Utility/Stun",
+      "ammo": "Energy"
+    }
+  },
+  {
+    "slug": "flashlight",
+    "name": "Flashlight",
+    "location": "Standard Equipment",
+    "type": "Utility",
+    "description": "Essential for survival in the pitch-black sewers. Critical for stopping the Bloomaw's attacks by shining light directly on it.",
+    "stats": {
+      "rarity": "Common",
+      "usage": "Visibility",
+      "counter": "Bloomaw"
+    }
+  },
+  {
+    "slug": "shotgun",
+    "name": "Shotgun",
+    "location": "Veteran Class Exclusive",
+    "type": "Ranged Weapon",
+    "description": "A powerful firearm available to the Veteran class. Highly effective against tough enemies like the Pit Maw.",
+    "stats": {
+      "rarity": "Epic",
+      "damage": "High",
+      "range": "Short/Medium"
+    }
+  },
+  {
+    "slug": "revive-syringe",
+    "name": "Revive Syringe",
+    "location": "Vending Machines / Codes",
+    "type": "Consumable",
+    "description": "A life-saving medical device used to revive downed teammates. Crucial for extending runs in co-op multiplayer.",
+    "stats": {
+      "rarity": "Uncommon",
+      "effect": "Revive Player",
+      "stack": "1"
+    }
+  },
+  {
+    "slug": "crocodile-egg",
+    "name": "Crocodile Egg",
+    "location": "Sewer Nest",
+    "type": "Objective Item",
+    "description": "A high-value item that provokes the Crocodile. Once picked up, the Crocodile will relentlessly pursue you until you drop it or die.",
+    "stats": {
+      "rarity": "Legendary",
+      "value": "High",
+      "risk": "Extreme"
+    }
+  },
+  {
+    "slug": "cooked-turkey",
+    "name": "Cooked Turkey",
+    "location": "Dropped by Fire Turkey",
+    "type": "Food",
+    "description": "A food item dropped when a Fire Turkey burns itself to death. Valuable for the delivery quota.",
+    "stats": {
+      "rarity": "Uncommon",
+      "source": "Fire Turkey",
+      "value": "Medium"
+    }
+  }
+]

@@ -1,0 +1,83 @@
+{
+  "common": {
+    "home": "Início",
+    "wiki": "Wiki",
+    "guide": "Guia",
+    "playNow": "Jogar Agora",
+    "backToHome": "Voltar ao Início",
+    "backToWiki": "Voltar ao Wiki",
+    "viewAllCodes": "Ver Todos os Códigos",
+    "viewGuide": "Ver Guia",
+    "needHelp": "Precisa de Ajuda?",
+    "updatedFor": "Atualizado para {month}",
+    "activeCodes": "Códigos Ativos",
+    "expiredCodes": "Códigos Expirados",
+    "new": "NOVO",
+    "copy": "COPIAR",
+    "copied": "Copiado!",
+    "working": "Funcionando?",
+    "yes": "Sim",
+    "no": "Não"
+  },
+  "home": {
+    "title": "{count} Códigos Ativos de Deadly Delivery - {month}",
+    "description": "Obtenha {count} códigos ativos de Roblox para Deadly Delivery. Copie com um clique e desbloqueie recompensas instantaneamente. Atualizado diariamente.",
+    "heroTitle": "Deadly Delivery",
+    "heroSubtitle": "Códigos e Wiki",
+    "heroDescription": "Não seja pego pelos monstros de mãos vazias. Obtenha os códigos ativos mais recentes para {coins}, {weapons}, e {revives} instantaneamente.",
+    "sectionCodes": "Códigos Roblox",
+    "sectionWiki": "Bancos de Dados Wiki",
+    "sectionHowTo": "Como Resgatar?",
+    "sectionRewards": "Recompensas dos Códigos",
+    "sectionFAQ": "Perguntas Frequentes",
+    "redeemSteps": {
+      "step1": "Inicie o Deadly Delivery no Roblox.",
+      "step2": "Toque nas Configurações (ícone de Engrenagem) no topo.",
+      "step3": "Encontre a caixa de texto 'Inserir Código'.",
+      "step4": "Cole um código e clique em Resgatar."
+    },
+    "rewards": {
+      "coins": "Moedas para melhorias",
+      "syringes": "Seringas de Revive (Salva-vidas)",
+      "guns": "Z-Ray Guns e Armas",
+      "items": "Itens Exclusivos Sazonais"
+    },
+    "faq": {
+      "whatAreCodes": {
+        "q": "O que são códigos de Deadly Delivery?",
+        "a": "Os códigos de Deadly Delivery são cupons promocionais lançados pelos desenvolvedores (Flat Head Studio). Eles concedem recompensas gratuitas instantaneamente, como moedas, Seringas de Revive, Z-Ray Guns e itens exclusivos para ajudá-lo a sobreviver."
+      },
+      "codeNotWorking": {
+        "q": "Por que meu código não está funcionando?",
+        "a": "Os códigos expiram rapidamente. Se um código não funcionar, pode estar expirado ou digitado incorretamente. Os códigos geralmente diferenciam maiúsculas de minúsculas!"
+      },
+      "howOften": {
+        "q": "Com que frequência novos códigos são lançados?",
+        "a": "Novos códigos de Deadly Delivery são geralmente lançados durante eventos especiais, feriados ou atualizações do jogo. Atualizamos nossa lista diariamente para garantir que você tenha acesso aos códigos ativos mais recentes."
+      }
+    }
+  },
+  "wiki": {
+    "title": "Wiki de Deadly Delivery - Banco de Dados Completo do Jogo e Guias",
+    "description": "Wiki completo de Deadly Delivery com banco de dados de armas, banco de dados de veículos, mapas, guias e muito mais. Tudo que você precisa para dominar Deadly Delivery.",
+    "heroTitle": "Wiki de Deadly Delivery",
+    "heroDescription": "Banco de dados completo do jogo, guias e recursos. Tudo que você precisa para dominar Deadly Delivery.",
+    "weapons": "Banco de Dados de Armas",
+    "weaponsDesc": "Lista completa de todas as armas com estatísticas, dano, taxa de tiro e preços",
+    "vehicles": "Banco de Dados de Veículos",
+    "vehiclesDesc": "Todos os veículos com velocidade, durabilidade, capacidade e informações de preços",
+    "guide": "Guia do Jogo",
+    "guideDesc": "Guia completo de jogabilidade, dicas, truques e estratégias",
+    "quickLinks": "Links Rápidos",
+    "viewWeapons": "Ver Banco de Dados de Armas",
+    "viewVehicles": "Ver Banco de Dados de Veículos"
+  },
+  "footer": {
+    "brand": "DeadlyBlox",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "contact": "Contato",
+    "copyright": "Deadly Delivery Codes & Wiki © {year}. Não afiliado à Roblox Corporation."
+  }
+}
+

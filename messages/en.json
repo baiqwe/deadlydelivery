@@ -1,0 +1,83 @@
+{
+  "common": {
+    "home": "Home",
+    "wiki": "Wiki",
+    "guide": "Guide",
+    "playNow": "Play Now",
+    "backToHome": "Back to Home",
+    "backToWiki": "Back to Wiki",
+    "viewAllCodes": "View All Codes",
+    "viewGuide": "View Guide",
+    "needHelp": "Need Help?",
+    "updatedFor": "Updated for {month}",
+    "activeCodes": "Active Codes",
+    "expiredCodes": "Expired Codes",
+    "new": "NEW",
+    "copy": "COPY",
+    "copied": "Copied!",
+    "working": "Working?",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "home": {
+    "title": "{count} Active Deadly Delivery Codes - {month}",
+    "description": "Get {count} active Roblox codes for Deadly Delivery. One-click copy promotional codes and unlock rewards instantly. Updated daily.",
+    "heroTitle": "Deadly Delivery",
+    "heroSubtitle": "Codes & Wiki",
+    "heroDescription": "Don't get caught by the monsters empty-handed. Grab the latest active codes for {coins}, {weapons}, and {revives} instantly.",
+    "sectionCodes": "Roblox Codes",
+    "sectionWiki": "Wiki Databases",
+    "sectionHowTo": "How to Redeem?",
+    "sectionRewards": "Code Rewards",
+    "sectionFAQ": "Common Questions",
+    "redeemSteps": {
+      "step1": "Launch Deadly Delivery on Roblox.",
+      "step2": "Tap the Settings (Gear icon) at the top.",
+      "step3": "Find the text box labeled 'Enter Code'.",
+      "step4": "Paste a code and click Redeem."
+    },
+    "rewards": {
+      "coins": "Coins for upgrades",
+      "syringes": "Revive Syringes (Life Savers)",
+      "guns": "Z-Ray Guns & Weapons",
+      "items": "Exclusive Seasonal Items"
+    },
+    "faq": {
+      "whatAreCodes": {
+        "q": "What are Deadly Delivery codes?",
+        "a": "Deadly Delivery codes are promotional coupons released by the developers (Flat Head Studio). They grant free in-game rewards instantly like coins, Revive Syringes, Z-Ray Guns, and exclusive items to help you survive."
+      },
+      "codeNotWorking": {
+        "q": "Why is my code not working?",
+        "a": "Codes expire quickly. If a code doesn't work, it might be expired or typed incorrectly. Codes are usually case-sensitive!"
+      },
+      "howOften": {
+        "q": "How often are new codes released?",
+        "a": "New Deadly Delivery codes are typically released during special events, holidays, or game updates. We update our list daily to ensure you have access to the latest active codes."
+      }
+    }
+  },
+  "wiki": {
+    "title": "Deadly Delivery Wiki - Complete Game Database & Guides",
+    "description": "Complete Deadly Delivery Wiki with weapons database, vehicles database, maps, guides, and more. Everything you need to master Deadly Delivery.",
+    "heroTitle": "Deadly Delivery Wiki",
+    "heroDescription": "Complete game database, guides, and resources. Everything you need to master Deadly Delivery.",
+    "weapons": "Weapons Database",
+    "weaponsDesc": "Complete list of all weapons with stats, damage, fire rate, and prices",
+    "vehicles": "Vehicles Database",
+    "vehiclesDesc": "All vehicles with speed, durability, capacity, and pricing information",
+    "guide": "Game Guide",
+    "guideDesc": "Complete gameplay guide, tips, tricks, and strategies",
+    "quickLinks": "Quick Links",
+    "viewWeapons": "View Weapons Database",
+    "viewVehicles": "View Vehicles Database"
+  },
+  "footer": {
+    "brand": "DeadlyBlox",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "copyright": "Deadly Delivery Codes & Wiki © {year}. Not affiliated with Roblox Corporation."
+  }
+}
+

@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Z-Ray Gun",
+    "damage": 45,
+    "fireRate": "Medium",
+    "range": "Long",
+    "price": 5000,
+    "acquisition": "Code or Shop",
+    "tier": "A",
+    "description": "Powerful ray gun with good damage and range. Excellent for long-range combat."
+  },
+  {
+    "name": "Baseball Bat",
+    "damage": 35,
+    "fireRate": "Fast",
+    "range": "Short",
+    "price": 2000,
+    "acquisition": "Code or Shop",
+    "tier": "B",
+    "description": "Reliable melee weapon. Great for close combat and defense."
+  },
+  {
+    "name": "Revive Syringe",
+    "damage": 0,
+    "fireRate": "N/A",
+    "range": "Self",
+    "price": 1500,
+    "acquisition": "Code or Shop",
+    "tier": "S",
+    "description": "Essential survival item. Instantly restores health when used."
+  }
+]
+

@@ -9,6 +9,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Gamepad2, Gift, HelpCircle, Settings, CheckCircle2, ChevronRight } from "lucide-react"
 import { SocialShare } from "@/components/social-share"
+import { ClientAutoLocale } from "@/components/client-auto-locale"
+import FeatureCard from "@/components/feature-card"
 // import { Comments } from "@/components/comments" // Temporarily hidden
 import type { Code } from "@/types/code"
 
@@ -142,33 +144,8 @@ export default function Home() {
       />
       
       <div className="min-h-screen flex flex-col">
-        {/* Header / Nav */}
-        <header className="border-b border-white/10 bg-black/20 backdrop-blur-xl sticky top-0 z-50">
-          <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl font-horror text-primary drop-shadow-md">DeadlyBlox</span>
-            </div>
-            <nav className="flex items-center gap-4">
-              <Link href="/guide">
-                <Button variant="ghost" className="text-muted-foreground hover:text-primary hover:bg-primary/10">
-                  Wiki Guide
-                </Button>
-              </Link>
-              <Button 
-                asChild
-                className="bg-primary text-black hover:bg-primary/90 font-bold"
-              >
-                <a 
-                  href="https://www.roblox.com/games/125810438250765/Deadly-Delivery" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  Play Now
-                </a>
-              </Button>
-            </nav>
-          </div>
-        </header>
+        {/* Auto Locale Detection */}
+        <ClientAutoLocale />
 
         {/* Hero Section */}
         <section className="relative py-16 md:py-24 px-4 text-center overflow-hidden">
@@ -238,6 +215,40 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Wiki Quick Links - Enhanced with FeatureCard */}
+          <div className="mt-16 max-w-5xl mx-auto">
+            <div className="flex items-center gap-3 mb-6 justify-center">
+              <Gamepad2 className="w-6 h-6 text-primary" />
+              <h2 className="text-3xl font-bold text-center">Wiki Databases</h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <FeatureCard
+                title="Items Database"
+                description="Browse all items, weapons, and vehicles"
+                icon="📦"
+                href="/items"
+              />
+              <FeatureCard
+                title="Weapons"
+                description="Complete weapons database with stats"
+                icon="🔫"
+                href="/wiki/weapons"
+              />
+              <FeatureCard
+                title="Vehicles"
+                description="All vehicles with speed & capacity"
+                icon="🚗"
+                href="/wiki/vehicles"
+              />
+              <FeatureCard
+                title="Guides"
+                description="Complete gameplay guides & tips"
+                icon="📚"
+                href="/guides"
+              />
+            </div>
           </div>
 
           {/* SEO Content Grid - 更加精良的排版 */}
@@ -330,20 +341,6 @@ export default function Home() {
             <Comments />
           </div> */}
         </main>
-
-        <footer className="border-t border-white/10 bg-black/40 py-12 mt-12">
-          <div className="container mx-auto px-4 text-center">
-            <p className="text-2xl font-horror text-muted-foreground mb-4">DeadlyBlox</p>
-            <div className="flex justify-center gap-6 text-sm text-muted-foreground/60 mb-8">
-              <Link href="/privacy" className="hover:text-primary">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-primary">Terms of Service</Link>
-              <Link href="/contact" className="hover:text-primary">Contact</Link>
-            </div>
-            <p className="text-xs text-muted-foreground/40">
-              Deadly Delivery Codes & Wiki © {new Date().getFullYear()}. Not affiliated with Roblox Corporation.
-            </p>
-          </div>
-        </footer>
       </div>
     </>
   )
