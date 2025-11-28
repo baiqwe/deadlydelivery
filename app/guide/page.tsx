@@ -12,7 +12,7 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "Deadly Delivery VR Release Date & Guide | Wiki",
+  title: "Roblox Deadly Delivery Release Date & Guide | Wiki",
   description: "Learn about Deadly Delivery VR release date, gameplay mechanics, tips and tricks. Your complete guide to mastering Deadly Delivery.",
   alternates: {
     canonical: "/guide",
