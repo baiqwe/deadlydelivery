@@ -24,8 +24,8 @@ import FeatureCard from "@/components/feature-card"
 import { AuthorBio } from "@/components/author-bio"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import type { Code } from "@/types/code"
-import { generateHreflangAlternates, getLocalizedUrl } from "@/lib/i18n-utils"
-import { localeToHreflang } from "@/lib/i18n-config"
+import { generateHreflangAlternates } from "@/lib/i18n-utils"
+import { localeToHreflang, getLocalizedUrl } from "@/lib/i18n-config"
 
 const codesData = codesDataRaw as Code[]
 const activeCodesCount = codesData.filter((code) => code.status === "active").length

@@ -85,7 +85,7 @@ export default function GuidePage() {
               <p className="text-lg leading-relaxed mb-4">
                 <strong>Deadly Delivery</strong> is a co-operative survival horror game developed by <strong>Flat Head Studio</strong> on Roblox. 
                 Players work together as delivery workers navigating treacherous sewer systems filled with dangerous entities. 
-                The objective is to collect food items to fill a "Money Bar" displayed at the top of the screen, then return to the elevator to bank earnings.
+                The objective is to collect food items to fill a &quot;Money Bar&quot; displayed at the top of the screen, then return to the elevator to bank earnings.
               </p>
               <p className="leading-relaxed">
                 Unlike traditional delivery games, Deadly Delivery emphasizes teamwork, resource management, and strategic decision-making. 
@@ -106,7 +106,7 @@ export default function GuidePage() {
                     <li><strong>Evacuate:</strong> End the run and bank all collected coins safely</li>
                   </ul>
                   <p className="text-sm text-muted-foreground italic">
-                    Strategic Tip: Communication with teammates is crucial. Sometimes it's better to evacuate early than risk losing everything on a difficult floor.
+                    Strategic Tip: Communication with teammates is crucial. Sometimes it&apos;s better to evacuate early than risk losing everything on a difficult floor.
                   </p>
                 </div>
                 
@@ -114,7 +114,7 @@ export default function GuidePage() {
                   <h4 className="text-xl font-semibold mb-2">Inventory Management</h4>
                   <p className="mb-3">
                     Each player has a 4-slot inventory. You must frequently return to the elevator to deposit items. 
-                    If you die, you're automatically evacuated but keep all items in your inventory.
+                    If you die, you&apos;re automatically evacuated but keep all items in your inventory.
                   </p>
                 </div>
 
@@ -136,8 +136,8 @@ export default function GuidePage() {
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Always carry a <Link href="/items" className="text-primary hover:underline">Flashlight</Link> for the pitch-black sewer environments</li>
                     <li>Learn to identify <Link href="/guides/monster-bestiary" className="text-primary hover:underline">Mimics</Link> - they wander aimlessly while real players have purpose</li>
-                    <li>Stock up on Revive Syringes from codes - they're essential for team survival</li>
-                    <li>Don't be greedy: evacuate when your inventory is full or health is low</li>
+                    <li>Stock up on Revive Syringes from codes - they&apos;re essential for team survival</li>
+                    <li>Don&apos;t be greedy: evacuate when your inventory is full or health is low</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -162,7 +162,7 @@ export default function GuidePage() {
                 <CardContent className="p-6">
                   <ol className="list-decimal pl-6 space-y-4">
                     <li className="leading-relaxed">
-                      <strong>Launch the game:</strong> Open Roblox and search for "Deadly Delivery" by Flat Head Studio, or use our direct link: 
+                      <strong>Launch the game:</strong> Open Roblox and search for &quot;Deadly Delivery&quot; by Flat Head Studio, or use our direct link: 
                       <a href="https://www.roblox.com/games/125810438250765/Deadly-Delivery" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">
                         Play Now
                       </a>
@@ -171,13 +171,13 @@ export default function GuidePage() {
                       <strong>Access Settings:</strong> Once in-game, look for the Settings icon (gear/cog) at the top of your screen
                     </li>
                     <li className="leading-relaxed">
-                      <strong>Find Code Box:</strong> In the Settings menu, locate the text field labeled "Enter Code" or "Redeem Code"
+                      <strong>Find Code Box:</strong> In the Settings menu, locate the text field labeled &quot;Enter Code&quot; or &quot;Redeem Code&quot;
                     </li>
                     <li className="leading-relaxed">
-                      <strong>Copy from our site:</strong> Return to our <Link href="/" className="text-primary hover:underline font-medium">latest codes page</Link> and click the "COPY" button next to any active code
+                      <strong>Copy from our site:</strong> Return to our <Link href="/" className="text-primary hover:underline font-medium">latest codes page</Link> and click the &quot;COPY&quot; button next to any active code
                     </li>
                     <li className="leading-relaxed">
-                      <strong>Paste and Redeem:</strong> Paste the code into the game's code field (Ctrl+V / Cmd+V) and click "Redeem" or "Submit"
+                      <strong>Paste and Redeem:</strong> Paste the code into the game&apos;s code field (Ctrl+V / Cmd+V) and click &quot;Redeem&quot; or &quot;Submit&quot;
                     </li>
                     <li className="leading-relaxed">
                       <strong>Claim Rewards:</strong> Your rewards will appear in your inventory instantly - no need to restart the game!
@@ -187,7 +187,7 @@ export default function GuidePage() {
                   <div className="mt-6 p-4 bg-primary/10 border border-primary/30 rounded-lg">
                     <p className="text-sm text-foreground">
                       <strong>Important:</strong> Codes are case-sensitive and expire quickly. Always use our verified, tested codes. 
-                      If a code doesn't work, it may have expired - check our list for the latest active codes.
+                      If a code doesn&apos;t work, it may have expired - check our list for the latest active codes.
                     </p>
                   </div>
                 </CardContent>

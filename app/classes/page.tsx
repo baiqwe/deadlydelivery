@@ -84,7 +84,7 @@ const classes: ClassData[] = [
   },
   {
     name: "Veteran",
-    tier: "A+",
+    tier: "A",
     unlockCost: "50,000+ coins (estimated)",
     unlockRequirements: "Advanced progression metrics + significant coin investment",
     startingBonus: "Shotgun access",

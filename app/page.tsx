@@ -354,15 +354,15 @@ export default function Home() {
                 <div className="space-y-6 text-foreground">
                   <p className="text-lg leading-relaxed">
                     <strong>Deadly Delivery</strong> is a thrilling co-operative survival horror game developed by <strong>Flat Head Studio</strong> on the Roblox platform. 
-                    Players work together as delivery workers navigating treacherous sewer systems, collecting food items to fill a "Money Bar" 
+                    Players work together as delivery workers navigating treacherous sewer systems, collecting food items to fill a &quot;Money Bar&quot; 
                     while evading deadly entities that lurk in the darkness.
                   </p>
                   
                   <div>
                     <h3 className="text-2xl font-bold text-primary mb-3">Core Gameplay Mechanics</h3>
                     <p className="mb-4">
-                      The game features a unique elevator-based progression system. Teams vote whether to go "Deep" (more dangerous floors with better loot) 
-                      or "Evacuate" (bank current earnings and end the run). Each player has a 4-slot inventory, requiring strategic item management 
+                      The game features a unique elevator-based progression system. Teams vote whether to go &quot;Deep&quot; (more dangerous floors with better loot) 
+                      or &quot;Evacuate&quot; (bank current earnings and end the run). Each player has a 4-slot inventory, requiring strategic item management 
                       and frequent returns to the elevator to deposit collected food items.
                     </p>
                   </div>
