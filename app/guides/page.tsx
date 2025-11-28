@@ -2,10 +2,11 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import guidesDataRaw from '@/data/guides.json'
 import type { Guide } from '@/types/guide'
-
-const guidesData = guidesDataRaw as Guide[]
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { BookOpen, ArrowRight, Tag } from 'lucide-react'
+import { Breadcrumbs } from '@/components/breadcrumbs'
+
+const guidesData = guidesDataRaw as Guide[]
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
 
@@ -22,6 +23,7 @@ export default function GuidesPage() {
   return (
     <div className="min-h-screen bg-background">
       <main className="container mx-auto px-4 py-10 max-w-6xl">
+        <Breadcrumbs items={[{ label: "Guides" }]} />
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <BookOpen className="w-8 h-8 text-primary" />

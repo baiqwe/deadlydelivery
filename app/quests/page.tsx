@@ -4,6 +4,7 @@ import questsDataRaw from '@/data/quests.json'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Target, ArrowRight, Trophy, Coins, Package, MapPin, AlertCircle } from 'lucide-react'
 import type { Quest } from '@/types/quest'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 const questsData = questsDataRaw as Quest[]
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
@@ -34,6 +35,7 @@ export default function QuestsPage() {
   return (
     <div className="min-h-screen bg-background">
       <main className="container mx-auto px-4 py-10 max-w-6xl">
+        <Breadcrumbs items={[{ label: "Quests" }]} />
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <Target className="w-8 h-8 text-primary" />

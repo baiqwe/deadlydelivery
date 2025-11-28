@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { siteConfig } from '@/config/site'
 import itemsData from '@/data/items.json'
 import ItemsClient from './ItemsClient'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
 
@@ -26,6 +27,7 @@ export default function ItemsPage() {
   return (
     <div className="min-h-screen bg-background">
       <main className="container mx-auto px-4 py-10">
+        <Breadcrumbs items={[{ label: "Items" }]} />
         <div className="mb-8">
           <h1 className="text-4xl font-horror text-primary mb-4">All Items</h1>
           <p className="text-muted-foreground text-lg">

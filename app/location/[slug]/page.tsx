@@ -5,6 +5,7 @@ import locationsData from '@/data/locations.json'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ArrowLeft, MapPin, Shield, AlertTriangle, Check } from 'lucide-react'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
 
@@ -51,6 +52,10 @@ export default function LocationDetailPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-background">
       <main className="container mx-auto px-4 py-10 max-w-4xl">
+        <Breadcrumbs items={[
+          { label: "Locations", href: "/locations" },
+          { label: location.name }
+        ]} />
         <div className="mb-6">
           <Link href="/locations">
             <Button variant="ghost" className="mb-4">

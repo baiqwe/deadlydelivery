@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ArrowLeft, MapPin, Tag, Package } from 'lucide-react'
 import type { Item } from '@/types/item'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
 
@@ -80,6 +81,10 @@ export default function ItemPage({ params }: PageProps) {
       />
       <div className="min-h-screen bg-background">
         <main className="container mx-auto px-4 py-10 max-w-4xl">
+          <Breadcrumbs items={[
+            { label: "Items", href: "/items" },
+            { label: item.name }
+          ]} />
           <div className="mb-6">
             <Link href="/items">
               <Button variant="ghost" className="mb-4">

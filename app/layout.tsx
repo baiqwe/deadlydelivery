@@ -43,13 +43,18 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode
-}) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
+  // Note: For dynamic locale detection, we would need middleware
+  // For static export, we'll set lang based on URL structure in individual pages
   return (
     <html lang="en" className="dark">
+      <head>
+        {/* Hreflang links will be added in individual pages using Metadata API */}
+      </head>
       <body className={inter.className}>
         {/* Google Analytics */}
         <Script

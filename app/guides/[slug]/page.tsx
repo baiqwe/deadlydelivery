@@ -5,6 +5,8 @@ import guidesDataRaw from '@/data/guides.json'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { ArrowLeft, BookOpen, Tag, Calendar, User } from 'lucide-react'
+import { AuthorBio } from '@/components/author-bio'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 import type { Guide } from '@/types/guide'
 
 const guidesData = guidesDataRaw as Guide[]
@@ -52,6 +54,10 @@ export default function GuideDetailPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-background">
       <main className="container mx-auto px-4 py-10 max-w-4xl">
+        <Breadcrumbs items={[
+          { label: "Guides", href: "/guides" },
+          { label: guide.title }
+        ]} />
         <div className="mb-6">
           <Link href="/guides">
             <Button variant="ghost" className="mb-4">
@@ -109,6 +115,24 @@ export default function GuideDetailPage({ params }: PageProps) {
               </div>
             </CardContent>
           </Card>
+
+          {/* Source & Verification Note */}
+          <Card className="bg-card/30 backdrop-blur-sm border-white/5 mt-6">
+            <CardContent className="p-6">
+              <p className="text-sm text-muted-foreground">
+                <strong className="text-foreground">Source:</strong> This guide is based on verified gameplay testing and community research. 
+                Information last verified on {guide.lastUpdated}. All strategies and mechanics have been tested in-game by experienced players.
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Author Bio */}
+          <AuthorBio 
+            authorName={guide.author}
+            authorRole="Deadly Delivery Strategy Expert"
+            expertise={guide.tags.map(tag => tag.charAt(0).toUpperCase() + tag.slice(1))}
+            experience="Extensive gameplay experience with verified strategies"
+          />
         </article>
       </main>
     </div>

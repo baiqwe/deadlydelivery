@@ -3,6 +3,7 @@ import Link from 'next/link'
 import locationsData from '@/data/locations.json'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { MapPin, ArrowRight, Shield, AlertTriangle } from 'lucide-react'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
 
@@ -19,6 +20,7 @@ export default function LocationsPage() {
   return (
     <div className="min-h-screen bg-background">
       <main className="container mx-auto px-4 py-10 max-w-6xl">
+        <Breadcrumbs items={[{ label: "Locations" }]} />
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <MapPin className="w-8 h-8 text-primary" />

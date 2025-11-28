@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArrowLeft, Sword, Car, Map, BookOpen, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
 
@@ -45,6 +46,7 @@ export default function WikiPage() {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12 max-w-6xl">
+        <Breadcrumbs items={[{ label: "Wiki" }]} />
         <div className="mb-12 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Search className="w-10 h-10 text-primary" />

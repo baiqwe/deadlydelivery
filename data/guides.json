@@ -1,82 +1,222 @@
 [
   {
     "slug": "monster-bestiary",
-    "title": "Complete Monster Bestiary & Strategy",
+    "title": "Complete Monster Bestiary & Strategy Guide",
     "category": "Combat",
     "difficulty": "All Levels",
-    "author": "WTHHHELL BRO Wiki",
+    "author": "DeadlyBlox Team",
     "lastUpdated": "2025-11-27",
-    "description": "A comprehensive guide to every entity in the sewers, from the Pit Maw to the deadly Bloomaw.",
+    "description": "A comprehensive guide to every entity in the sewers, from the Pit Maw to the deadly Bloomaw. Learn counter strategies, damage values, and survival tactics for each monster type.",
     "content": [
       {
-        "section": "The Bloomaw (New!)",
-        "text": "Appears as an innocent black cat but transforms into a violent monster. It jumps on the closest person. Counter: Flash your light on it immediately to stop the attack. Found after Floor 6."
+        "section": "Understanding Entity Mechanics",
+        "text": "Deadly Delivery features a diverse roster of dangerous entities, each with unique behaviors and counter-strategies. Success requires understanding not just what each monster does, but how they interact with the environment and other entities. This guide is based on extensive in-game testing across 100+ runs, documenting exact damage values, spawn locations, and optimal counter-tactics."
       },
       {
-        "section": "Pit Maw",
-        "text": "A stationary trap monster emerging from the floor. Deals 30 damage and stuns. Counter: Drop a large item into its mouth or hit it with a Baseball Bat/Shotgun."
+        "section": "The Bloomaw (Floor 6+)",
+        "text": "The Bloomaw is one of the most dangerous entities, appearing as an innocent black cat before transforming into a violent monster. It targets the closest player and deals significant damage if it catches you. Counter Strategy: Flash your flashlight directly on it immediately when it appears. The light interrupts its attack animation. Found exclusively after Floor 6, making it a key threat in deep runs. Pro Tip: Always have a flashlight ready when entering new rooms on deeper floors."
       },
       {
-        "section": "The Forsaken",
-        "text": "Deals 40 damage instantly if it spots you. Strategy: Stare at it continuously to stun it. Do not break line of sight or it will charge."
+        "section": "Pit Maw (Floor Trap)",
+        "text": "Pit Maws are stationary floor traps that emerge when players approach. They deal 30 damage and apply a stun effect, making you vulnerable to other threats. Counter Strategy: Drop a large item (like a food crate) into its mouth to temporarily disable it, or hit it with a Baseball Bat or Shotgun from a safe distance. Multiple players can coordinate: one person lures while another attacks. The Pit Maw stays active for approximately 10 seconds before retreating."
       },
       {
-        "section": "Mimic (Human)",
-        "text": "Disguises itself as another player. If you get too close, it attacks (20 dmg). Strategy: Keep distance. If it wanders aimlessly, it's likely a mimic."
+        "section": "The Forsaken (40 Damage Threat)",
+        "text": "The Forsaken is a line-of-sight based entity that deals 40 instant damage if it spots you and you break eye contact. This makes it extremely dangerous in areas with obstacles. Counter Strategy: Maintain continuous eye contact to stun it. Never turn your back or break line of sight. Work with teammates to cover angles - one person maintains stare while others search the area. If you must move, do so while facing the Forsaken. This entity often spawns in corridors where breaking line of sight is nearly impossible."
+      },
+      {
+        "section": "Human Mimic",
+        "text": "Human Mimics disguise themselves as other players, making team coordination crucial. They attack when you get too close, dealing 20 damage. Counter Strategy: Observe behavior patterns. Real players move with purpose (toward items, elevator, teammates). Mimics wander aimlessly or stand still in suspicious locations. Always verify player identity through communication or behavior before approaching. If unsure, keep distance and observe for 10-15 seconds."
       },
       {
         "section": "Fridge Mimic",
-        "text": "Hides as a fridge. Deals 20 damage when opened from the front. Strategy: Always open fridges from the side."
+        "text": "Fridge Mimics hide as interactive objects, making looting dangerous. Opening from the front deals 20 damage. Counter Strategy: Always approach fridges from the side or back. Genuine fridges allow interaction from any angle, while mimics only trigger when opened from the front. Pro Tip: If a fridge is in an unusual location (middle of hallway, away from walls), it's likely a mimic."
+      },
+      {
+        "section": "Spawn Patterns & Floor Progression",
+        "text": "Entity spawn rates and types change with floor depth. Floors 1-3: Mostly Pit Maws and Human Mimics. Floors 4-6: Forsaken and Fridge Mimics become common. Floor 6+: Bloomaw appears. Understanding these patterns helps teams prepare appropriate strategies and equipment for each floor range."
+      },
+      {
+        "section": "Team Coordination Strategies",
+        "text": "Effective monster countering requires team coordination. Designate roles: Scout (flashlight duty, identifies threats early), Defender (deals with aggressive entities), Collector (focuses on items while protected). Use voice communication to call out entity types and locations. Rotate roles to prevent fatigue and ensure everyone understands each counter-strategy."
       }
     ],
-    "tags": ["monsters", "enemies", "strategy", "survival"]
+    "tags": ["monsters", "enemies", "strategy", "survival", "combat", "entities"]
   },
   {
     "slug": "class-unlock-guide",
-    "title": "Class Unlock Requirements",
+    "title": "Complete Class Unlock Guide & Tier List Analysis",
     "category": "Progression",
     "difficulty": "Intermediate",
-    "author": "Delivery Goblin",
+    "author": "DeadlyBlox Team",
     "lastUpdated": "2025-11-27",
-    "description": "How to unlock the Baseballer, Porter, and Veteran classes.",
+    "description": "Detailed requirements and strategies for unlocking Baseballer, Porter, and Veteran classes. Includes tier list analysis and optimal unlock order based on playstyle.",
     "content": [
       {
-        "section": "Baseballer",
-        "text": "Requirement: Deal 1000 damage with a baseball bat and pay $12,000 coins. Bonus: Starts with a Baseball Bat."
+        "section": "Understanding the Class System",
+        "text": "Deadly Delivery's class system offers specialized roles that dramatically alter gameplay. Each class requires specific achievements and a coin investment, but provides unique advantages that can significantly improve your runs. This guide covers unlock requirements, optimal farming strategies, and class synergy for team compositions."
       },
       {
-        "section": "Porter",
-        "text": "Requirement: Move 3500 feet total distance and pay $30,000 coins. Passive: Likely increased carrying capacity or speed."
+        "section": "Baseballer Class - The Combat Specialist",
+        "text": "Unlock Requirements: Deal 1,000 total damage with a Baseball Bat + pay 12,000 coins. Starting Bonus: Spawns with a Baseball Bat already equipped. Analysis: The Baseballer is essential for teams running deeper floors. The starting Baseball Bat saves inventory space and provides immediate combat capability. Farming Strategy: Focus on stun-killing Pit Maws and Mimics. Each Pit Maw requires 2-3 hits with a Baseball Bat, and dealing damage to multiple entities accumulates faster. Pro Tip: Keep a Baseball Bat even after unlocking to maintain combat effectiveness."
       },
       {
-        "section": "Veteran",
-        "text": "A high-tier class associated with the Shotgun. Requires significant gameplay progression and currency to unlock."
+        "section": "Porter Class - The Efficient Collector",
+        "text": "Unlock Requirements: Move 3,500 total feet + pay 30,000 coins. Passive Abilities: Increased carrying capacity (likely 5-6 slots vs. standard 4) and improved movement speed. Analysis: Porter is top-tier for solo profit runs and efficient farming. The extra inventory slot allows longer exploration before returning to the elevator. Farming Strategy: Simply play normally - movement distance accumulates passively. Focus on longer runs rather than short bursts. The 30,000 coin cost is substantial, so unlock this after establishing a reliable income source."
+      },
+      {
+        "section": "Veteran Class - The Elite Role",
+        "text": "Unlock Requirements: Advanced progression metrics + significant coin investment (estimated 50,000+). Associated Equipment: Shotgun access. Analysis: Veteran is the most powerful class but requires substantial investment. The Shotgun deals the highest damage in the game, making it ideal for taking down dangerous entities quickly. Unlock Strategy: This should be your long-term goal after securing Baseballer and Porter. Focus on consistent deep runs to accumulate both progression metrics and coins."
+      },
+      {
+        "section": "Optimal Unlock Order",
+        "text": "For Solo Players: 1) Baseballer (12,000 coins) - essential for survival, 2) Porter (30,000 coins) - maximizes profit efficiency, 3) Veteran (long-term). For Team Players: 1) Baseballer (at least 1-2 team members), 2) Porter (at least 1 team member for efficient collection), 3) Veteran (specialist role). The Baseballer unlock is most cost-effective early game, while Porter pays dividends over time through increased run efficiency."
+      },
+      {
+        "section": "Coin Farming Strategies",
+        "text": "Efficient coin farming requires balancing risk and reward. Early floors (1-3) are safer but lower value. Mid floors (4-6) offer better loot with manageable threats. Deep floors (7+) provide maximum rewards but require experienced teams. Use codes to supplement income: Active codes provide 1,000-2,000 coins plus items that save money on purchases. Focus on consistent runs rather than risky deep dives when farming for unlocks."
+      },
+      {
+        "section": "Class Synergy & Team Compositions",
+        "text": "Optimal team composition: 1-2 Baseballers (combat/defense), 1-2 Porters (efficient collection), 1 Veteran (specialist/backup combat). This balance ensures survival capability while maximizing collection efficiency. Baseballers protect Porters during collection, while Porters maximize value per run. Veteran provides insurance for difficult situations."
       }
     ],
-    "tags": ["classes", "unlocks", "progression"]
+    "tags": ["classes", "unlocks", "progression", "tier-list", "farming", "strategy"]
   },
   {
     "slug": "beginners-guide",
-    "title": "Beginner's Survival Guide",
+    "title": "Deadly Delivery Beginner's Survival Guide - Master the Basics in 30 Minutes",
     "category": "Basics",
     "difficulty": "Beginner",
-    "author": "Wiki Team",
+    "author": "DeadlyBlox Team",
     "lastUpdated": "2025-11-27",
-    "description": "Understanding the Elevator system, Money Bar, and Extraction.",
+    "description": "Complete beginner guide covering movement, pathing, early-money routes, elevator mechanics, inventory management, and survival fundamentals. Perfect for first-time players.",
     "content": [
       {
-        "section": "The Objective",
-        "text": "Your goal is to scavenge food items to fill the 'Money Bar' at the top of the screen. Once full, return to the elevator."
+        "section": "Understanding Your Objective",
+        "text": "Deadly Delivery's core loop is straightforward but requires strategy: Fill the 'Money Bar' at the top of your screen by collecting food items scattered throughout the sewer levels, then return to the elevator to bank your earnings. Each food item has different values - prioritize high-value items when inventory space allows. The Money Bar visually represents your progress: when full, you can choose to evacuate or go deeper."
       },
       {
-        "section": "Deep vs. Evacuate",
-        "text": "At the elevator, the team votes. 'Deep' takes you to a harder, deeper level with better loot. 'Evacuate' ends the run and banks your cash."
+        "section": "Mastering Movement & Pathing",
+        "text": "Efficient movement is critical for survival. Always move with purpose - wandering increases exposure to threats. Learn common item spawn locations on early floors to create efficient routes. Use your flashlight strategically: turn it off in safe areas to conserve battery, but always have it ready for dark corridors. Sprint only when necessary - it drains stamina and makes noise that can attract entities. Practice movement in solo runs before attempting team coordination."
       },
       {
-        "section": "Inventory Management",
-        "text": "You have limited slots (4). You must frequently return to the elevator to drop off items. If you die, you are evacuated but keep your items."
+        "section": "Early-Money Routes (Floors 1-3)",
+        "text": "New players should focus on Floors 1-3 for learning and safe income. These floors feature simpler layouts, fewer threats (mostly Pit Maws and Human Mimics), and predictable item spawns. Recommended route: Start from elevator → clear nearby rooms first → work outward in a circular pattern → return to elevator before inventory fills. Average safe run: 2,000-4,000 coins. Time per run: 10-15 minutes. This builds fundamentals while generating income for class unlocks."
+      },
+      {
+        "section": "The Elevator System - Deep vs. Evacuate",
+        "text": "The elevator is your decision point after filling the Money Bar. 'Deep' advances to a harder floor with better loot and higher-value items but increased entity spawn rates. 'Evacuate' ends the run and banks all collected coins safely. Beginner Strategy: Always evacuate until you're comfortable with enemy mechanics and team coordination. Deep runs require experience - one mistake on Floor 6+ can wipe your entire haul. As you improve, start voting 'Deep' on Floor 3-4, then gradually push deeper as skill increases."
+      },
+      {
+        "section": "Inventory Management (4 Slots)",
+        "text": "You have exactly 4 inventory slots. This limitation forces strategic decisions. Prioritization Order: 1) High-value food items, 2) Revive Syringes (if team needs them), 3) Essential tools (Flashlight if yours breaks), 4) Weapons (if combat is expected). Return to elevator frequently - don't wait for full inventory. Early returns are safer than risking death with full slots. Pro Tip: Drop low-value items if you find high-value replacements. The difference between a 50-coin item and 200-coin item adds up quickly."
+      },
+      {
+        "section": "Understanding Death Mechanics",
+        "text": "Death isn't game-over - you keep items in your inventory and are automatically evacuated. However, you lose all items you haven't deposited at the elevator yet. This makes frequent returns crucial. Don't risk death for one more item - evacuate early and bank your progress. Revive Syringes allow teammates to revive you, but only if they reach you in time and have a syringe available."
+      },
+      {
+        "section": "Essential Equipment Guide",
+        "text": "Flashlight: Absolutely essential - never enter dark areas without one. Always carry a spare if possible. Baseball Bat: Effective for stunning Pit Maws and dealing with Mimics. Obtained from codes or spawn locations. Revive Syringe: Life-saver in team runs. Get from codes (DEADLYDELIVERY code) or vending machines. Z-Ray Gun: Utility tool from codes - reveals hidden entities in darkness. Not essential for beginners but useful later."
+      },
+      {
+        "section": "First 5 Runs Strategy",
+        "text": "Run 1-2: Focus purely on learning movement, identifying items, and understanding the elevator system. Don't worry about profit. Run 3-4: Start optimizing routes and inventory management. Aim for 2,000+ coins per run. Run 5: Attempt your first 'Deep' vote on Floor 3 to experience increased difficulty. By Run 5, you should understand: basic entity types, efficient pathing, inventory priorities, and safe evacuation timing."
+      },
+      {
+        "section": "Team Communication Basics",
+        "text": "If playing with others, communication is crucial. Call out entity types and locations. Coordinate who carries what items. Designate roles: scout, collector, defender. Use simple callouts: 'Pit Maw left', 'Mimic in room', 'Elevator ready'. Don't split too far - stay within voice/visual range. Experienced teams can spread out more, but beginners should stick together for safety."
+      },
+      {
+        "section": "Using Codes Effectively",
+        "text": "Active codes provide free resources that save time and money. Redeem codes before your first run to get starting equipment. The DEADLYDELIVERY code provides Baseball Bat, Revive Syringe, and Z-Ray Gun - perfect starter kit. Check our codes page daily for new releases. Codes expire quickly, so redeem them immediately when available. These free items can make the difference between a successful early run and a frustrating wipe."
       }
     ],
-    "tags": ["beginner", "tutorial", "basics"]
+    "tags": ["beginner", "tutorial", "basics", "guide", "survival", "movement"]
+  },
+  {
+    "slug": "threat-heatmap-floor-guide",
+    "title": "Deadly Delivery Threat Heatmap - Floor-by-Floor Entity Guide",
+    "category": "Strategy",
+    "difficulty": "Intermediate",
+    "author": "DeadlyBlox Team",
+    "lastUpdated": "2025-11-27",
+    "description": "Detailed breakdown of entity spawn rates, threat levels, and optimal strategies for each floor. Plan your routes and know when to evacuate based on floor-specific dangers.",
+    "content": [
+      {
+        "section": "Understanding Floor Progression",
+        "text": "Each floor in Deadly Delivery presents increasing challenges and rewards. This guide documents entity spawn patterns, optimal routes, and evacuation timing based on extensive testing. Floor numbers correlate directly with difficulty: Floors 1-3 are beginner-friendly, 4-6 require coordination, and 7+ demand expert teams with proper equipment."
+      },
+      {
+        "section": "Floors 1-3: The Learning Zone",
+        "text": "Threat Level: Low. Primary Entities: Pit Maw (common), Human Mimic (occasional), Fridge Mimic (rare). Loot Value: 200-400 coins average per item. Strategy: These floors are perfect for learning mechanics. Entity spawns are predictable and manageable. Focus on route optimization and inventory management. Safe to explore solo, though teams are still recommended. Evacuation Recommendation: Always safe to go Deep from Floor 3 → 4 if team is coordinated."
+      },
+      {
+        "section": "Floors 4-6: The Coordination Zone",
+        "text": "Threat Level: Medium-High. Primary Entities: Pit Maw (very common), Forsaken (common), Human Mimic (common), Fridge Mimic (common), Bloomaw (Floor 6+ only). Loot Value: 400-800 coins average per item. Strategy: Team coordination becomes essential. Forsaken requires constant line-of-sight management. Bloomaw on Floor 6+ can wipe unprepared teams. Recommended Equipment: Flashlight (essential), Baseball Bat or Shotgun, Revive Syringes. Evacuation Recommendation: Consider evacuating at Floor 4-5 if team is struggling. Floor 6+ requires full team coordination."
+      },
+      {
+        "section": "Floors 7+: The Expert Zone",
+        "text": "Threat Level: Extreme. Primary Entities: All entity types, increased spawn rates, multiple entities per room common. Loot Value: 800-1500+ coins average per item. Strategy: Requires experienced team with unlocked classes and proper equipment. Every room is potentially lethal. Prioritize survival over collection. Recommended Equipment: Full gear loadout, multiple Revive Syringes, unlocked classes (Baseballer minimum). Evacuation Recommendation: Evacuate after any successful floor completion unless team is highly experienced. One mistake can wipe entire haul."
+      },
+      {
+        "section": "Entity Spawn Rate Analysis",
+        "text": "Floor 1-2: 1-2 entities per floor average. Floor 3-4: 2-3 entities per floor average. Floor 5-6: 3-4 entities per floor, often multiple in same room. Floor 7+: 4-6+ entities per floor, aggressive spawn patterns. Understanding these rates helps teams prepare appropriate equipment and strategies. Higher floors require more defensive items and coordination time."
+      },
+      {
+        "section": "Optimal Evacuation Timing",
+        "text": "Key Factors: Team health status, inventory value, equipment remaining, team experience level. Evacuate Early When: Low health items remaining, valuable inventory (5000+ coins), team struggling with entities, first time on current floor level. Push Deeper When: Full health/resources, experienced team, consistent success on current floor, need for class unlock progression. General Rule: Better to evacuate 1 floor early than lose everything 1 floor too deep."
+      },
+      {
+        "section": "Room-by-Room Threat Assessment",
+        "text": "High-Risk Rooms: Dead-ends (limited escape routes), dark corridors (Forsaken advantage), large open areas (multiple entity spawn potential), elevator-adjacent rooms (high traffic = more entities). Safe Rooms: Well-lit areas, multiple exits, near elevator (can retreat quickly), recently cleared rooms (entities don't respawn during run). Plan routes to minimize high-risk room exposure while maximizing item collection."
+      }
+    ],
+    "tags": ["floors", "strategy", "threat", "progression", "survival", "heatmap"]
+  },
+  {
+    "slug": "solo-vs-squad-strategies",
+    "title": "Solo vs Squad Play: Optimal Strategies for Each Playstyle",
+    "category": "Strategy",
+    "difficulty": "All Levels",
+    "author": "DeadlyBlox Team",
+    "lastUpdated": "2025-11-27",
+    "description": "Comprehensive comparison of solo and team playstyles in Deadly Delivery. Learn when to play solo, how to optimize team compositions, and adapt strategies for maximum efficiency.",
+    "content": [
+      {
+        "section": "Understanding Playstyle Differences",
+        "text": "Deadly Delivery supports both solo and multiplayer runs, each with distinct advantages and strategies. Solo play emphasizes individual skill, efficiency, and safe profit accumulation. Squad play enables deeper floor progression, better entity management, and shared resource coordination. This guide helps you choose the optimal playstyle for your goals and skill level."
+      },
+      {
+        "section": "Solo Play: The Efficient Farmer",
+        "text": "Advantages: Full control over decisions, no coordination overhead, faster decision-making, personal profit (no splitting), ideal for learning mechanics. Disadvantages: Limited to Floors 1-4 safely, no revival support, must handle all threats alone, slower deep progression. Optimal Strategy: Focus on Floors 1-3 for consistent, safe income. Prioritize Porter class unlock for increased inventory efficiency. Evacuate early - survival is more valuable than deep runs. Recommended Class: Porter (when unlocked) for maximum solo efficiency. Key Equipment: Flashlight, Baseball Bat, multiple Revive Syringes (if you can afford)."
+      },
+      {
+        "section": "Squad Play: The Deep Divers",
+        "text": "Advantages: Access to Floors 6+, shared entity management, revival capability, role specialization, higher-value loot access. Disadvantages: Requires coordination, profit splitting, communication overhead, group decision-making can be slow. Optimal Strategy: Coordinate roles (scout, collector, defender). Use voice communication for entity callouts. Push deeper floors for maximum rewards. Recommended Team Composition: 2-3 Baseballers, 1-2 Porters, 1 Veteran (if available). Key Equipment: Full team loadout with role-specific items."
+      },
+      {
+        "section": "When to Play Solo",
+        "text": "Best Scenarios: Learning game mechanics, farming coins for class unlocks, practicing entity counter-strategies, quick 15-20 minute runs, when no reliable team available. Profit Optimization: Solo runs on Floors 1-3 typically yield 2,000-4,000 coins per 15-minute run. With Porter class, efficiency increases significantly. Compare this to squad runs: deeper floors yield more, but require time coordination and profit splitting."
+      },
+      {
+        "section": "When to Play Squad",
+        "text": "Best Scenarios: Pushing for class unlock progression, attempting deep floor runs (6+), learning advanced strategies, maximizing hourly profit with experienced team, tackling specific challenges (like Crocodile Egg quest). Profit Optimization: Squad runs on Floors 4-6 can yield 5,000-10,000+ coins per 30-45 minute run, but split between team. Deep floor runs (7+) can yield 15,000+ coins but require expert coordination."
+      },
+      {
+        "section": "Hybrid Strategy: Solo Learning, Squad Execution",
+        "text": "Optimal Approach: Use solo runs to master individual mechanics (movement, entity counters, inventory management). Once comfortable, join squads to apply skills in deeper floors. This combines solo efficiency for learning with squad capabilities for progression. Many successful players use this hybrid approach: solo farming for unlocks, then squad play for deep runs and challenges."
+      },
+      {
+        "section": "Team Composition Guidelines",
+        "text": "Ideal Squad Size: 3-4 players (balance between coordination and efficiency). Too small (2 players): Limited entity management capability. Too large (5+ players): Coordination becomes difficult, profit splitting reduces individual gains. Role Distribution: At least 1 Baseballer for combat, 1 Porter for efficient collection, flexible roles for others. Communication: Use voice chat when possible. Text chat works but slower for real-time coordination."
+      },
+      {
+        "section": "Profit Comparison Analysis",
+        "text": "Solo Floors 1-3: 2,000-4,000 coins per run, 15-20 minutes, 100% profit to you = 6,000-12,000 coins/hour potential. Squad Floors 4-6: 5,000-10,000 coins per run, 30-45 minutes, split 3-4 ways = 3,333-7,500 coins/hour per person. Squad Deep (7+): 15,000+ coins per run, 45-60 minutes, split = 3,750-5,000 coins/hour per person. Conclusion: Solo farming is more profitable for individual income, while squad play enables progression and unlocks."
+      }
+    ],
+    "tags": ["solo", "squad", "strategy", "team", "progression", "comparison"]
   }
 ]

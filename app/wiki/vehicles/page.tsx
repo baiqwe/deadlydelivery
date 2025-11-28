@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowLeft, Car, Gauge, Shield, Package, DollarSign } from "lucide-react"
 import type { Vehicle } from "@/types/vehicle"
 import { cn } from "@/lib/utils"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 const vehiclesData = vehiclesDataRaw as Vehicle[]
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
@@ -32,6 +33,10 @@ export default function VehiclesPage() {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12 max-w-6xl">
+        <Breadcrumbs items={[
+          { label: "Wiki", href: "/wiki" },
+          { label: "Vehicles" }
+        ]} />
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <Car className="w-8 h-8 text-primary" />

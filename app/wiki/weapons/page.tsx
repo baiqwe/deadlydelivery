@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowLeft, Sword, Zap, Target, DollarSign, Star } from "lucide-react"
 import type { Weapon } from "@/types/weapon"
 import { cn } from "@/lib/utils"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 const weaponsData = weaponsDataRaw as Weapon[]
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
@@ -32,6 +33,10 @@ export default function WeaponsPage() {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12 max-w-6xl">
+        <Breadcrumbs items={[
+          { label: "Wiki", href: "/wiki" },
+          { label: "Weapons" }
+        ]} />
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <Sword className="w-8 h-8 text-primary" />
