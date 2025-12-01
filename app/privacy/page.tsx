@@ -114,17 +114,67 @@ export default function PrivacyPage() {
 
           <Card className="bg-card/50 backdrop-blur-sm border-white/5">
             <CardHeader>
+              <CardTitle>Google AdSense and DoubleClick DART Cookie</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-muted-foreground">
+              <p>
+                We may use Google AdSense advertising on our website. Google, as a third-party vendor, uses cookies to serve ads on our site. Google's use of the DART cookie enables it to serve ads to our users based on their visit to our site and other sites on the Internet.
+              </p>
+              <div className="bg-black/20 border border-white/5 rounded-lg p-4 space-y-3">
+                <h3 className="text-lg font-semibold text-foreground">About the DART Cookie</h3>
+                <p className="text-sm">
+                  The DoubleClick DART cookie is used by Google in the ads served on websites displaying AdSense for content ads. When users visit our website and either view or click on an ad, a cookie may be dropped on that end user's browser.
+                </p>
+                <p className="text-sm">
+                  The data gathered from these cookies will be used to help better serve and manage ads on our site and across the web tailored to a user's interest.
+                </p>
+              </div>
+              <div className="bg-black/20 border border-white/5 rounded-lg p-4 space-y-3">
+                <h3 className="text-lg font-semibold text-foreground">Opting Out of Personalized Advertising</h3>
+                <p className="text-sm">
+                  Users may opt out of the use of the DART cookie by visiting the Google Ad and Content Network Privacy Policy at the following URL:
+                </p>
+                <a
+                  href="https://policies.google.com/technologies/ads"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline text-sm block"
+                >
+                  https://policies.google.com/technologies/ads
+                </a>
+                <p className="text-sm mt-2">
+                  You can also opt out of personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.aboutads.info</a>.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card/50 backdrop-blur-sm border-white/5">
+            <CardHeader>
               <CardTitle>Third-Party Services</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground">
               <p>
                 Our website may contain links to third-party websites or services that are not owned or controlled by us. We are not responsible for the privacy practices of these third-party services. We encourage you to review the privacy policies of any third-party services you access.
               </p>
-              <p>
-                We use Google Analytics, which is a web analytics service provided by Google. For more information about how Google uses data, please visit <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google&apos;s Privacy Policy</a>.
-              </p>
+              <div className="space-y-3">
+                <h3 className="text-lg font-semibold text-foreground">Third-Party Services We Use:</h3>
+                <div className="bg-black/20 border border-white/5 rounded-lg p-4">
+                  <h4 className="font-semibold text-foreground mb-2">Google Analytics</h4>
+                  <p className="text-sm">
+                    We use Google Analytics, a web analytics service provided by Google. For more information about how Google uses data, please visit <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google's Privacy Policy</a>.
+                  </p>
+                </div>
+                <div className="bg-black/20 border border-white/5 rounded-lg p-4">
+                  <h4 className="font-semibold text-foreground mb-2">Google AdSense (if applicable)</h4>
+                  <p className="text-sm">
+                    We may display advertisements through Google AdSense. Google AdSense uses cookies and web beacons to collect information about your browsing activities to provide personalized advertisements. You can control ad personalization through your <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google Ads Settings</a>.
+                  </p>
+                </div>
+              </div>
             </CardContent>
           </Card>
+
 
           <Card className="bg-card/50 backdrop-blur-sm border-white/5">
             <CardHeader>

@@ -8,15 +8,16 @@ export const siteConfig = {
     twitter: "https://twitter.com/deadlyblox",
     github: "https://github.com/baiqwe/deadlydelivery",
   },
-          // 导航菜单 - 保留原有的 Codes，添加新的 Wiki 页面
-          mainNav: [
-            { title: "Home", href: "/" },
-            { title: "Codes", href: "/" }, // 主页就是 Codes 页面
-            { title: "Monsters", href: "/monsters" }, // 新增：怪物图鉴
-            { title: "Classes", href: "/classes" }, // 新增：职业层级列表
-            { title: "Items", href: "/items" }, // 新增：物品数据库
-            { title: "Guides", href: "/guides" }, // 新增：指南页面
-            { title: "Wiki", href: "/wiki" }, // 保留现有的 Wiki 主页
-          ],
+  // 导航菜单 - 保留原有的 Codes，添加新的 Wiki 页面
+  mainNav: [
+    { title: "Home", href: "/" },
+    { title: "Codes", href: "/" }, // 主页就是 Codes 页面
+    { title: "Monsters", href: "/monsters" }, // 新增：怪物图鉴
+    { title: "Classes", href: "/classes" }, // 新增：职业层级列表
+    { title: "Items", href: "/items" }, // 新增：物品数据库
+    { title: "Guides", href: "/guides" }, // 新增：指南页面
+    { title: "Wiki", href: "/wiki" }, // 保留现有的 Wiki 主页
+    { title: "About", href: "/about" }, // About Us 页面
+  ],
 }
 

@@ -122,21 +122,37 @@ export default function ContactPage() {
           <CardContent className="space-y-6">
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Currently, we do not have a public contact email address. However, you can reach us through the following methods:
+                We welcome your questions, feedback, and code submissions! You can reach us through the following methods:
               </p>
-              
+
               <div className="bg-black/20 border border-white/5 rounded-lg p-6 space-y-4">
+                <div>
+                  <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                    <Mail className="w-4 h-4" />
+                    Email Contact
+                  </h3>
+                  <p className="text-sm mb-2">
+                    For general inquiries, code submissions, or reporting issues, you can contact us at:
+                  </p>
+                  <a href="mailto:mrwhiteqq@163.com" className="text-primary hover:underline font-medium">
+                    mrwhiteqq@163.com
+                  </a>
+                  <p className="text-xs mt-2 text-muted-foreground/80">
+                    We typically respond within 24-48 hours.
+                  </p>
+                </div>
+
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">For Code Issues:</h3>
                   <p className="text-sm">
-                    If you find an expired code or want to report that a code isn&apos;t working, please note it in the code voting section on the homepage. We regularly monitor and update our code database.
+                    If you find an expired code or want to report that a code isn&apos;t working, you can email us or note it in the code voting section on the homepage. We regularly monitor and update our code database.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">For Website Issues:</h3>
                   <p className="text-sm">
-                    If you encounter any technical problems with the website, please try refreshing the page or clearing your browser cache. Most issues are resolved this way.
+                    If you encounter any technical problems with the website, please email us with details about the issue, including your browser type and what page you were visiting. Most issues are resolved quickly.
                   </p>
                 </div>
 
