@@ -12,6 +12,7 @@ import { SocialShare } from "@/components/social-share"
 import { ClientAutoLocale } from "@/components/client-auto-locale"
 import FeatureCard from "@/components/feature-card"
 import { AuthorBio } from "@/components/author-bio"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 // import { Comments } from "@/components/comments" // Temporarily hidden
 import type { Code } from "@/types/code"
 
@@ -210,6 +211,7 @@ export default function Home() {
         <main className="container mx-auto px-4 pb-16 flex-1">
           
           <div className="max-w-3xl mx-auto">
+            <Breadcrumbs items={[{ label: "Codes" }]} />
             <CodesList codes={codesData} />
             
             {/* Social Share */}

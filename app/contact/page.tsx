@@ -46,7 +46,7 @@ export default function ContactPage() {
               </p>
               <div className="pt-4 border-t border-white/10">
                 <p className="text-sm">
-                  Please use the form below or check our <Link href="/" className="text-primary hover:underline">FAQ section</Link> on the homepage.
+                  Please check our <Link href="/" className="text-primary hover:underline">FAQ section</Link> on the homepage or contact us via email.
                 </p>
               </div>
             </CardContent>
@@ -121,38 +121,36 @@ export default function ContactPage() {
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="space-y-4 text-muted-foreground">
-              <p>
-                We welcome your questions, feedback, and code submissions! You can reach us through the following methods:
-              </p>
-
-              <div className="bg-black/20 border border-white/5 rounded-lg p-6 space-y-4">
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                    <Mail className="w-4 h-4" />
-                    Email Contact
-                  </h3>
-                  <p className="text-sm mb-2">
-                    For general inquiries, code submissions, or reporting issues, you can contact us at:
-                  </p>
-                  <a href="mailto:mrwhiteqq@163.com" className="text-primary hover:underline font-medium">
-                    mrwhiteqq@163.com
-                  </a>
-                  <p className="text-xs mt-2 text-muted-foreground/80">
-                    We typically respond within 24-48 hours.
-                  </p>
+              <div className="bg-primary/10 border border-primary/30 rounded-lg p-6 mb-6">
+                <div className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-2">Email Us:</h3>
+                    <p className="text-sm mb-3">
+                      For general inquiries, code submissions, bug reports, or feedback, please contact us at:
+                    </p>
+                    <a 
+                      href="mailto:developwebfordeadly@2925.com" 
+                      className="text-primary hover:underline font-medium text-lg"
+                    >
+                      developwebfordeadly@2925.com
+                    </a>
+                  </div>
                 </div>
-
+              </div>
+              
+              <div className="bg-black/20 border border-white/5 rounded-lg p-6 space-y-4">
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">For Code Issues:</h3>
                   <p className="text-sm">
-                    If you find an expired code or want to report that a code isn&apos;t working, you can email us or note it in the code voting section on the homepage. We regularly monitor and update our code database.
+                    If you find an expired code or want to report that a code isn&apos;t working, please email us or note it in the code voting section on the homepage. We regularly monitor and update our code database.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">For Website Issues:</h3>
                   <p className="text-sm">
-                    If you encounter any technical problems with the website, please email us with details about the issue, including your browser type and what page you were visiting. Most issues are resolved quickly.
+                    If you encounter any technical problems with the website, please email us or try refreshing the page or clearing your browser cache. Most issues are resolved this way.
                   </p>
                 </div>
 
