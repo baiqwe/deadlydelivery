@@ -53,6 +53,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className="dark">
       <head>
+        {/* Google AdSense */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2499950673294937"
+          crossOrigin="anonymous"></script>
         {/* Hreflang links will be added in individual pages using Metadata API */}
       </head>
       <body className={inter.className}>
