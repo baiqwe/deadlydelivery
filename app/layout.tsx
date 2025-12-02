@@ -52,13 +52,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
   // For static export, we'll set lang based on URL structure in individual pages
   return (
     <html lang="en" className="dark">
-      <head>
-        {/* Google AdSense */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2499950673294937"
-          crossOrigin="anonymous"></script>
-        {/* Hreflang links will be added in individual pages using Metadata API */}
-      </head>
       <body className={inter.className}>
+        {/* Google AdSense - Using Next.js Script component for better compatibility */}
+        <Script
+          id="adsbygoogle-init"
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2499950673294937"
+        />
+
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-4ST6SB4EGB"
