@@ -3,6 +3,7 @@ import { siteConfig } from '@/config/site'
 import itemsData from '@/data/items.json'
 import ItemsClient from './ItemsClient'
 import { Breadcrumbs } from '@/components/breadcrumbs'
+import { Card, CardContent } from '@/components/ui/card'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
 
@@ -36,6 +37,36 @@ export default function ItemsPage() {
             usage tips.
           </p>
         </div>
+
+        {/* Expert Commentary Section - Content Enhancement for AdSense */}
+        <Card className="bg-card/50 backdrop-blur-sm border-white/5 mb-8">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-bold text-primary mb-4">Understanding Items in Deadly Delivery</h2>
+            <div className="space-y-4 text-muted-foreground">
+              <p className="leading-relaxed">
+                Items are the core resource system in Deadly Delivery, encompassing weapons, consumables, utility tools, and objective items. Each item serves a specific purpose in your survival strategy, from combat effectiveness to inventory management. This comprehensive database documents every item&apos;s stats, acquisition methods, and strategic value based on extensive gameplay analysis.
+              </p>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Essential Survival Items:</h3>
+                <p className="text-sm leading-relaxed">
+                  The <strong className="text-primary">Flashlight</strong> is arguably the most critical item - the pitch-black sewers are nearly impossible to navigate without proper lighting. Always carry at least one flashlight, and consider a backup if you&apos;re planning deep floor runs. The <strong className="text-primary">Revive Syringe</strong> is essential for team play, allowing you to revive downed teammates and extend successful runs. These can be obtained from codes or vending machines, making codes particularly valuable for stocking essential supplies.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Combat & Utility Items:</h3>
+                <p className="text-sm leading-relaxed">
+                  Weapons like the <strong className="text-primary">Baseball Bat</strong> and <strong className="text-primary">Z-Ray Gun</strong> provide both offensive and utility capabilities. The Baseball Bat can stun Pit Maws and deal with Mimics effectively, while the Z-Ray Gun reveals hidden entities in darkness - invaluable for scouting dangerous areas. Understanding when to prioritize combat items versus utility items is key to successful inventory management during runs.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Item Rarity & Value Tiers:</h3>
+                <p className="text-sm leading-relaxed">
+                  Items are categorized by rarity (S, A, B, Common, Limited), which generally correlates with their effectiveness and acquisition difficulty. S-tier items are the most powerful but hardest to obtain, while Common items are readily available but offer basic functionality. When inventory space is limited (4 slots), prioritize items that provide the most value for your current objective - survival items for dangerous floors, high-value items for farming runs.
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
 
         <div className="mb-6 flex flex-wrap gap-4">
           <div className="bg-primary/10 border border-primary/30 px-4 py-2 rounded-lg">

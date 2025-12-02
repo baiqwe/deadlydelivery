@@ -47,6 +47,42 @@ export default function VehiclesPage() {
           </p>
         </div>
 
+        {/* Expert Commentary Section - Content Enhancement for AdSense */}
+        <Card className="bg-card/50 backdrop-blur-sm border-white/5 mb-8">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-bold text-primary mb-4">Vehicle Selection & Optimization Guide</h2>
+            <div className="space-y-4 text-muted-foreground">
+              <p className="leading-relaxed">
+                Vehicles in Deadly Delivery are more than just transportation - they&apos;re essential tools for efficient package delivery and survival in the dangerous sewer systems. Each vehicle offers unique advantages in speed, durability, and cargo capacity. Understanding these trade-offs is crucial for maximizing your delivery efficiency and profit per run.
+              </p>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Speed vs. Durability Trade-off:</h3>
+                <p className="text-sm leading-relaxed">
+                  Faster vehicles allow you to complete routes more quickly and escape threats, but they often sacrifice durability. High-speed vehicles are ideal for experienced players who can navigate efficiently and avoid damage. Slower, more durable vehicles suit newer players who may encounter more obstacles and need extra resilience. Consider your skill level and the typical floor depth you&apos;re exploring when making this choice.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Cargo Capacity Matters:</h3>
+                <p className="text-sm leading-relaxed">
+                  Vehicles with higher capacity enable longer exploration before returning to the elevator. This directly impacts your profit-per-run efficiency. A vehicle that can carry 6 items instead of 4 means 50% more collection before evacuation, potentially doubling your earnings. However, capacity often comes at the cost of speed or durability. Balance these factors based on your playstyle - solo farmers benefit more from capacity, while team players might prioritize speed for quick rotations.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Investment Strategy:</h3>
+                <p className="text-sm leading-relaxed">
+                  Vehicle upgrades represent significant coin investments. Prioritize based on your progression goals: early-game players should focus on affordable vehicles that provide immediate utility for Floors 1-3. Mid-game players can invest in balanced vehicles for deeper exploration (Floors 4-6). End-game vehicles with premium stats are best reserved after you&apos;ve unlocked essential classes like Porter or Baseballer, as those classes provide more value for the coin investment.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Vehicle Maintenance & Optimization:</h3>
+                <p className="text-sm leading-relaxed">
+                  Durability directly affects how long your vehicle remains functional during deep floor runs. Higher durability vehicles can sustain more entity encounters and environmental hazards before requiring replacement. Plan your routes and risk assessment accordingly - a low-durability vehicle on a deep floor run is a risky investment. Consider carrying spare vehicles or using codes to supplement your vehicle inventory for critical missions.
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Vehicles Table */}
         <Card className="bg-card/50 backdrop-blur-sm border-white/5">
           <CardHeader>

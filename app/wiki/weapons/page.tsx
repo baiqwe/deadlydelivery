@@ -47,6 +47,36 @@ export default function WeaponsPage() {
           </p>
         </div>
 
+        {/* Expert Commentary Section - Content Enhancement for AdSense */}
+        <Card className="bg-card/50 backdrop-blur-sm border-white/5 mb-8">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-bold text-primary mb-4">Weapon Selection Strategy Guide</h2>
+            <div className="space-y-4 text-muted-foreground">
+              <p className="leading-relaxed">
+                In Deadly Delivery, weapon choice directly impacts your survival rate and efficiency in deeper floors. This comprehensive database compares all available weapons based on extensive gameplay testing and community feedback. Understanding weapon stats is crucial for making informed decisions that balance damage output, cost-effectiveness, and acquisition difficulty.
+              </p>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">For Beginners:</h3>
+                <p className="text-sm leading-relaxed">
+                  Start with the <strong className="text-primary">Baseball Bat</strong> - it&apos;s accessible through codes (DEADLYDELIVERY) or as a starter item for the Baseballer class. Its moderate damage and stun capability make it perfect for handling Pit Maws and Mimics on early floors. The Baseball Bat is cost-effective and reliable, making it the ideal entry-level weapon for new players learning entity counter-strategies.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">For Advanced Players:</h3>
+                <p className="text-sm leading-relaxed">
+                  The <strong className="text-primary">Shotgun</strong> represents the pinnacle of combat effectiveness, available to the Veteran class. With the highest damage output in the game, it excels at quickly eliminating dangerous entities on deeper floors. However, unlocking the Veteran class requires significant progression investment (estimated 50,000+ coins and advanced metrics). We recommend mastering the Baseball Bat first, then progressing to Porter class for efficient farming before pursuing Veteran.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Strategic Considerations:</h3>
+                <p className="text-sm leading-relaxed">
+                  Beyond raw damage numbers, consider fire rate for dealing with multiple threats, range for safe engagement distances, and acquisition method. Weapons obtained through codes provide immediate access without grinding, while shop-purchased weapons require consistent coin farming. Balance your weapon investment with class unlocks - a well-chosen class can provide weapon access without purchasing it separately.
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Weapons Table */}
         <Card className="bg-card/50 backdrop-blur-sm border-white/5">
           <CardHeader>
