@@ -1,13 +1,15 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import codesDataRaw from "@/data/codes.json"
+import guidesDataRaw from "@/data/guides.json"
 import { CodesList } from "@/components/codes-list"
 import { UpdateBanner } from "@/components/update-banner"
 import { format } from "date-fns"
 import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Gamepad2, Gift, HelpCircle, Settings, CheckCircle2, ChevronRight, Shield, TrendingUp, Users } from "lucide-react"
+import { Gamepad2, Gift, HelpCircle, Settings, CheckCircle2, ChevronRight, Shield, TrendingUp, Users, BookOpen, ArrowRight } from "lucide-react"
+import type { Guide } from "@/types/guide"
 import { SocialShare } from "@/components/social-share"
 import { ClientAutoLocale } from "@/components/client-auto-locale"
 import FeatureCard from "@/components/feature-card"
@@ -18,8 +20,11 @@ import type { Code } from "@/types/code"
 
 // Type assertion to ensure proper typing
 const codesData = codesDataRaw as Code[]
+const guidesData = guidesDataRaw as Guide[]
 
 const activeCodesCount = codesData.filter((code) => code.status === "active").length
+// Get latest 3 guides for homepage showcase
+const latestGuides = guidesData.slice(0, 3)
 const currentMonth = format(new Date(), "MMMM yyyy")
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
@@ -482,6 +487,52 @@ export default function Home() {
                   Guides page
                 </Link>
               </p>
+            </div>
+          </section>
+
+          {/* Latest Guides Section - Content Enhancement for AdSense */}
+          <section className="mt-20 max-w-5xl mx-auto">
+            <div className="flex items-center gap-3 mb-8 justify-center">
+              <BookOpen className="w-7 h-7 text-primary" />
+              <h2 className="text-3xl font-bold text-center">Latest Game Guides & Strategies</h2>
+            </div>
+            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Master Deadly Delivery with our comprehensive guides covering monsters, classes, strategies, and advanced tactics. Written by experienced players with 100+ hours of gameplay.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {latestGuides.map((guide) => (
+                <Link key={guide.slug} href={`/guides/${guide.slug}`}>
+                  <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-primary/20 transition-all duration-300 h-full group cursor-pointer">
+                    <CardHeader>
+                      <div className="flex items-start justify-between mb-2">
+                        <CardTitle className="text-lg group-hover:text-primary transition-colors line-clamp-2">
+                          {guide.title}
+                        </CardTitle>
+                        <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0 ml-2" />
+                      </div>
+                      <span className="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-primary/10 text-primary border border-primary/30">
+                        {guide.category}
+                      </span>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{guide.description}</p>
+                      <div className="flex items-center justify-between text-xs text-muted-foreground">
+                        <span>Updated: {format(new Date(guide.lastUpdated), "MMM yyyy")}</span>
+                        <span className="group-hover:text-primary transition-colors">Read more →</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <Link href="/guides">
+                <Button variant="outline" size="lg">
+                  <BookOpen className="mr-2 h-5 w-5" />
+                  View All Guides
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </section>
 
