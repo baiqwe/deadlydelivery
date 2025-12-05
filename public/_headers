@@ -1,0 +1,41 @@
+# Cloudflare Pages Headers
+# Configure caching and performance optimizations
+
+# Cache static assets for 1 year
+/icon-*.png
+  Cache-Control: public, max-age=31536000, immutable
+  
+/favicon.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+/apple-icon.png
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache manifest and robots for 1 day
+/manifest.json
+  Cache-Control: public, max-age=86400
+
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+
+# Next.js static assets
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Optimized images from next-image-export-optimizer
+/nextImageExportOptimizer/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML pages - short cache for fresh content
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Default for all other files
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin

@@ -1,0 +1,14 @@
+# Cloudflare Pages Redirects
+# This file handles URL normalization and redirects
+# Format: <source> <destination> <status_code>
+
+# Trailing slash normalization - redirect all trailing slashes to non-trailing slash versions
+# This prevents duplicate content issues with Google
+
+/*/ /:splat 301
+
+# Note: The above rule will redirect any URL with a trailing slash to the same URL without it
+# For example: /wiki/ -> /wiki, /items/ -> /items, etc.
+
+# If you have any old URLs that need to redirect to new ones, add them below:
+# /old-page /new-page 301
