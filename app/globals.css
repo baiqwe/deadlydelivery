@@ -65,8 +65,8 @@
   }
 }
 
-/* Horror font for logo/titles - optimized with font-display: swap */
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;500;600;700&display=swap');
+/* Horror font for logo/titles - now loaded asynchronously in layout.tsx */
+/* Removed @import to eliminate render-blocking */
 
 .font-horror {
   font-family: 'Creepster', cursive;

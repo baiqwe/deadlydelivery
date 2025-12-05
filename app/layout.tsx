@@ -51,6 +51,24 @@ export default function RootLayout({ children }: RootLayoutProps) {
   // For static export, we'll set lang based on URL structure in individual pages
   return (
     <html lang="en" className="dark">
+      <head>
+        {/* Preconnect to Google Fonts - Critical for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Async font loading - eliminates render-blocking */}
+        <link
+          id="google-fonts"
+          href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+          media="print"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.getElementById('google-fonts').media='all'`
+          }}
+        />
+      </head>
       <body className={inter.className}>
         {/* Google AdSense - Using Next.js Script component for better compatibility */}
         <Script
