@@ -23,6 +23,7 @@ import { SocialShare } from "@/components/social-share"
 import FeatureCard from "@/components/feature-card"
 import { AuthorBio } from "@/components/author-bio"
 import { Breadcrumbs } from "@/components/breadcrumbs"
+import { YouTubeLite } from "@/components/youtube-lite"
 import type { Code } from "@/types/code"
 import { generateHreflangAlternates } from "@/lib/i18n-utils"
 import { localeToHreflang, getLocalizedUrl } from "@/lib/i18n-config"
@@ -80,7 +81,7 @@ export default function PortugueseBRPage() {
         {/* Hero Section */}
         <section className="relative py-16 md:py-24 px-4 text-center overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10 pointer-events-none" />
-          
+
           <div className="container mx-auto max-w-4xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/30 text-secondary-foreground text-sm font-medium mb-6 animate-fade-in">
               <span className="relative flex h-2 w-2">
@@ -89,11 +90,11 @@ export default function PortugueseBRPage() {
               </span>
               Atualizado em {currentMonth}
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-horror text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 mb-6 drop-shadow-sm">
-              Deadly Delivery <br/> <span className="text-primary">Códigos & Wiki</span>
+              Deadly Delivery <br /> <span className="text-primary">Códigos & Wiki</span>
             </h1>
-            
+
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
               Não seja pego pelos monstros de mãos vazias. Pegue os últimos códigos ativos para{" "}
               <strong className="text-primary mx-1">Moedas</strong>,{" "}
@@ -110,10 +111,10 @@ export default function PortugueseBRPage() {
         {/* Main Content Area */}
         <main className="container mx-auto px-4 pb-16 flex-1">
           <Breadcrumbs items={[{ label: "Início" }]} />
-          
+
           <div className="max-w-3xl mx-auto">
             <CodesList codes={codesData} />
-            
+
             {/* Social Share */}
             <div className="mt-8">
               <SocialShare title="Códigos de Deadly Delivery" />
@@ -247,7 +248,7 @@ export default function PortugueseBRPage() {
               <HelpCircle className="w-6 h-6 text-primary" />
               <h2 className="text-3xl font-bold text-center">Perguntas Frequentes</h2>
             </div>
-            
+
             <Accordion type="single" collapsible className="w-full space-y-4">
               {FAQ_DATA_PT.map((item, index) => (
                 <AccordionItem key={index} value={`item-${index + 1}`} className="border border-white/10 rounded-lg bg-card/30 px-4">
@@ -275,13 +276,10 @@ export default function PortugueseBRPage() {
               <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-primary/20 transition-all">
                 <CardContent className="p-0">
                   <div className="aspect-video bg-black/20 rounded-t-lg overflow-hidden">
-                    <iframe
-                      className="w-full h-full"
-                      src="https://www.youtube.com/embed/RAbD9QEmWHw"
+                    <YouTubeLite
+                      videoId="RAbD9QEmWHw"
                       title="Guia Completo para Iniciantes - Deadly Delivery"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
+                    />
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg font-semibold mb-2">Guia Completo para Iniciantes</h3>
@@ -291,17 +289,14 @@ export default function PortugueseBRPage() {
                   </div>
                 </CardContent>
               </Card>
-              
+
               <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-primary/20 transition-all">
                 <CardContent className="p-0">
                   <div className="aspect-video bg-black/20 rounded-t-lg overflow-hidden">
-                    <iframe
-                      className="w-full h-full"
-                      src="https://www.youtube.com/embed/VV2ZZ_y43vk"
+                    <YouTubeLite
+                      videoId="VV2ZZ_y43vk"
                       title="Estratégias Avançadas e Dicas - Deadly Delivery"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
+                    />
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg font-semibold mb-2">Estratégias Avançadas e Dicas</h3>
@@ -316,7 +311,7 @@ export default function PortugueseBRPage() {
 
           {/* Author Bio */}
           <div className="mt-16 max-w-3xl mx-auto">
-            <AuthorBio 
+            <AuthorBio
               authorName="Equipe DeadlyBlox"
               authorRole="Especialista em Deadly Delivery e Verificador de Códigos"
               expertise={["Análise de Mecânicas de Jogo", "Verificação de Códigos", "Estratégia de Inimigos", "Progressão de Classes"]}

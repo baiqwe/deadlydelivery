@@ -1,14 +1,16 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, lazy, Suspense } from "react"
 import { Copy, Check, Sparkles, Clock, Gift } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useToast } from "@/components/ui/use-toast"
-import Confetti from "react-confetti"
 import { differenceInDays } from "date-fns"
 import type { Code } from "@/types/code"
 import { cn } from "@/lib/utils"
 import { CodeVote } from "./code-vote"
+
+// Lazy load Confetti - only loads when user copies a code (~80KB saved on initial load)
+const Confetti = lazy(() => import("react-confetti"))
 
 interface CodesListProps {
   codes: Code[]
@@ -35,7 +37,7 @@ export function CodesList({ codes }: CodesListProps) {
   const isNewCode = (code: Code) => {
     const lastCheckedDate = new Date(code.lastChecked)
     const daysSinceChecked = differenceInDays(new Date(), lastCheckedDate)
-    return daysSinceChecked <= 7 
+    return daysSinceChecked <= 7
   }
 
   const handleCopy = async (code: string) => {
@@ -43,7 +45,7 @@ export function CodesList({ codes }: CodesListProps) {
       await navigator.clipboard.writeText(code)
       setCopiedCode(code)
       setShowConfetti(true)
-      
+
       toast({
         title: "Success!",
         description: (
@@ -72,16 +74,18 @@ export function CodesList({ codes }: CodesListProps) {
     <div className="relative">
       {showConfetti && (
         <div className="fixed inset-0 pointer-events-none z-50">
-          <Confetti
-            width={windowSize.width}
-            height={windowSize.height}
-            recycle={false}
-            numberOfPieces={300}
-            gravity={0.2}
-          />
+          <Suspense fallback={null}>
+            <Confetti
+              width={windowSize.width}
+              height={windowSize.height}
+              recycle={false}
+              numberOfPieces={300}
+              gravity={0.2}
+            />
+          </Suspense>
         </div>
       )}
-      
+
       <div className="space-y-8">
         {/* Active Codes Section */}
         <div className="space-y-4">
@@ -103,7 +107,7 @@ export function CodesList({ codes }: CodesListProps) {
               >
                 {/* 这种布局让代码看起来像一张票据 */}
                 <div className="flex flex-col sm:flex-row items-stretch gap-4 bg-black/40 rounded-lg p-4 backdrop-blur-xl">
-                  
+
                   {/* Code Display Area */}
                   <div className="flex-1 flex flex-col justify-center min-w-0">
                     <div className="flex items-center gap-3 mb-1.5">
@@ -129,8 +133,8 @@ export function CodesList({ codes }: CodesListProps) {
                       onClick={() => handleCopy(item.code)}
                       className={cn(
                         "w-full sm:w-32 font-bold transition-all duration-300",
-                        copiedCode === item.code 
-                          ? "bg-green-500/20 text-green-400 hover:bg-green-500/30 border-green-500/50" 
+                        copiedCode === item.code
+                          ? "bg-green-500/20 text-green-400 hover:bg-green-500/30 border-green-500/50"
                           : "bg-primary hover:bg-primary/90 text-black hover:scale-105"
                       )}
                       size="lg"

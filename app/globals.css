@@ -12,7 +12,7 @@
     /* 卡片：深色玻璃拟态 */
     --card: 224 71% 4%;
     --card-foreground: 210 40% 98%;
- 
+
     --popover: 224 71% 4%;
     --popover-foreground: 210 40% 98%;
 
@@ -37,7 +37,8 @@
     --border: 217 19% 27%;
     --input: 217 19% 27%;
     --ring: 142 70% 50%;
-    --radius: 0.75rem; /* 圆角稍微大一点，更现代 */
+    --radius: 0.75rem;
+    /* 圆角稍微大一点，更现代 */
   }
 }
 
@@ -45,13 +46,15 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     /* 添加一个径向渐变背景，模拟中心光照/迷雾效果 */
-    background-image: 
+    background-image:
       radial-gradient(circle at 50% 0%, hsl(262, 80%, 20%, 0.4) 0%, transparent 50%),
       radial-gradient(circle at 80% 20%, hsl(142, 70%, 10%, 0.2) 0%, transparent 30%);
-    background-attachment: fixed; /* 背景固定，滚动时更有层次感 */
+    background-attachment: fixed;
+    /* 背景固定，滚动时更有层次感 */
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -62,7 +65,7 @@
   }
 }
 
-/* Horror font for logo/titles */
+/* Horror font for logo/titles - optimized with font-display: swap */
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;500;600;700&display=swap');
 
 .font-horror {
@@ -81,6 +84,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -90,6 +94,7 @@ body {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
@@ -99,6 +104,7 @@ body {
   from {
     transform: translateY(-100%);
   }
+
   to {
     transform: translateY(0);
   }
@@ -108,6 +114,7 @@ body {
   from {
     transform: translateY(100%);
   }
+
   to {
     transform: translateY(0);
   }
@@ -117,6 +124,7 @@ body {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(100%);
   }
@@ -148,6 +156,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -165,7 +174,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(217, 217, 217, 0.05); /* Subtle placeholder */
+  background: rgba(217, 217, 217, 0.05);
+  /* Subtle placeholder */
   border-radius: 0.5rem;
   transition: background 0.3s ease;
 }
@@ -185,4 +195,3 @@ body {
 .ad-container.loaded::before {
   display: none;
 }
-

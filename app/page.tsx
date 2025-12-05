@@ -15,6 +15,7 @@ import { ClientAutoLocale } from "@/components/client-auto-locale"
 import FeatureCard from "@/components/feature-card"
 import { AuthorBio } from "@/components/author-bio"
 import { Breadcrumbs } from "@/components/breadcrumbs"
+import { YouTubeLite } from "@/components/youtube-lite"
 // import { Comments } from "@/components/comments" // Temporarily hidden
 import type { Code } from "@/types/code"
 
@@ -73,7 +74,7 @@ const FAQ_DATA = [
 
 function generateSchema() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deadlyblox.com'
-  
+
   // FAQPage Schema - Generated from FAQ_DATA to ensure consistency with UI
   const faqSchema = {
     "@context": "https://schema.org",
@@ -176,7 +177,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
+
       <div className="min-h-screen flex flex-col">
         {/* Auto Locale Detection */}
         <ClientAutoLocale />
@@ -185,7 +186,7 @@ export default function Home() {
         <section className="relative py-16 md:py-24 px-4 text-center overflow-hidden">
           {/* 背景光效装饰 */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10 pointer-events-none" />
-          
+
           <div className="container mx-auto max-w-4xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/30 text-secondary-foreground text-sm font-medium mb-6 animate-fade-in">
               <span className="relative flex h-2 w-2">
@@ -194,15 +195,15 @@ export default function Home() {
               </span>
               Updated for November 2025
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-horror text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 mb-6 drop-shadow-sm">
-              Deadly Delivery <br/> <span className="text-primary">Codes & Wiki</span>
+              Deadly Delivery <br /> <span className="text-primary">Codes & Wiki</span>
             </h1>
-            
+
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              Don&apos;t get caught by the monsters empty-handed. Grab the latest active codes for 
-              <strong className="text-primary mx-1">Coins</strong>, 
-              <strong className="text-secondary mx-1">Weapons</strong>, and 
+              Don&apos;t get caught by the monsters empty-handed. Grab the latest active codes for
+              <strong className="text-primary mx-1">Coins</strong>,
+              <strong className="text-secondary mx-1">Weapons</strong>, and
               <strong className="text-primary mx-1">Revives</strong> instantly.
             </p>
 
@@ -214,11 +215,11 @@ export default function Home() {
 
         {/* Main Content Area */}
         <main className="container mx-auto px-4 pb-16 flex-1">
-          
+
           <div className="max-w-3xl mx-auto">
             <Breadcrumbs items={[{ label: "Codes" }]} />
             <CodesList codes={codesData} />
-            
+
             {/* Social Share */}
             <div className="mt-8">
               <SocialShare title="Deadly Delivery Codes" />
@@ -288,7 +289,7 @@ export default function Home() {
 
           {/* SEO Content Grid - 更加精良的排版 */}
           <div className="mt-20 grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            
+
             {/* How to Redeem - Step by Step */}
             <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-primary/20 transition-all duration-300">
               <CardHeader>
@@ -355,21 +356,21 @@ export default function Home() {
               <Gamepad2 className="w-7 h-7 text-primary" />
               <h2 className="text-3xl font-bold text-center">About Deadly Delivery: Complete Game Overview</h2>
             </div>
-            
+
             <Card className="bg-card/50 backdrop-blur-sm border-white/5 mb-8">
               <CardContent className="p-8 prose prose-invert max-w-none">
                 <div className="space-y-6 text-foreground">
                   <p className="text-lg leading-relaxed">
-                    <strong>Deadly Delivery</strong> is a thrilling co-operative survival horror game developed by <strong>Flat Head Studio</strong> on the Roblox platform. 
-                    Players work together as delivery workers navigating treacherous sewer systems, collecting food items to fill a &quot;Money Bar&quot; 
+                    <strong>Deadly Delivery</strong> is a thrilling co-operative survival horror game developed by <strong>Flat Head Studio</strong> on the Roblox platform.
+                    Players work together as delivery workers navigating treacherous sewer systems, collecting food items to fill a &quot;Money Bar&quot;
                     while evading deadly entities that lurk in the darkness.
                   </p>
-                  
+
                   <div>
                     <h3 className="text-2xl font-bold text-primary mb-3">Core Gameplay Mechanics</h3>
                     <p className="mb-4">
-                      The game features a unique elevator-based progression system. Teams vote whether to go &quot;Deep&quot; (more dangerous floors with better loot) 
-                      or &quot;Evacuate&quot; (bank current earnings and end the run). Each player has a 4-slot inventory, requiring strategic item management 
+                      The game features a unique elevator-based progression system. Teams vote whether to go &quot;Deep&quot; (more dangerous floors with better loot)
+                      or &quot;Evacuate&quot; (bank current earnings and end the run). Each player has a 4-slot inventory, requiring strategic item management
                       and frequent returns to the elevator to deposit collected food items.
                     </p>
                   </div>
@@ -377,8 +378,8 @@ export default function Home() {
                   <div>
                     <h3 className="text-2xl font-bold text-primary mb-3">Enemies & Threats</h3>
                     <p className="mb-4">
-                      Deadly Delivery features a diverse bestiary of dangerous entities. From the <strong>Pit Maw</strong> (floor traps dealing 30 damage) 
-                      to the <strong>Bloomaw</strong> (a shape-shifting cat monster found after Floor 6), each enemy requires specific counter-strategies. 
+                      Deadly Delivery features a diverse bestiary of dangerous entities. From the <strong>Pit Maw</strong> (floor traps dealing 30 damage)
+                      to the <strong>Bloomaw</strong> (a shape-shifting cat monster found after Floor 6), each enemy requires specific counter-strategies.
                       The <strong>Forsaken</strong> deals 40 instant damage if you break eye contact, while <strong>Mimics</strong> disguise as players or objects.
                     </p>
                   </div>
@@ -386,8 +387,8 @@ export default function Home() {
                   <div>
                     <h3 className="text-2xl font-bold text-primary mb-3">Classes & Progression</h3>
                     <p className="mb-4">
-                      Players can unlock specialized classes: <strong>Baseballer</strong> (requires 1000 bat damage + $12,000 coins), 
-                      <strong>Porter</strong> (3500 feet movement + $30,000 coins), and <strong>Veteran</strong> (advanced progression). 
+                      Players can unlock specialized classes: <strong>Baseballer</strong> (requires 1000 bat damage + $12,000 coins),
+                      <strong>Porter</strong> (3500 feet movement + $30,000 coins), and <strong>Veteran</strong> (advanced progression).
                       Each class offers unique advantages, such as starting weapons or enhanced carrying capacity.
                     </p>
                   </div>
@@ -395,8 +396,8 @@ export default function Home() {
                   <div>
                     <h3 className="text-2xl font-bold text-primary mb-3">Why This Guide Exists</h3>
                     <p className="mb-4">
-                      This website was created by dedicated Deadly Delivery players with <strong>100+ hours of gameplay experience</strong>. 
-                      Our team manually verifies every code, tests strategies against each enemy type, and maintains accurate data on items, weapons, 
+                      This website was created by dedicated Deadly Delivery players with <strong>100+ hours of gameplay experience</strong>.
+                      Our team manually verifies every code, tests strategies against each enemy type, and maintains accurate data on items, weapons,
                       and locations. We update our content regularly based on in-game testing and community feedback.
                     </p>
                     <p className="text-muted-foreground italic">
@@ -414,7 +415,7 @@ export default function Home() {
               <HelpCircle className="w-6 h-6 text-primary" />
               <h2 className="text-3xl font-bold text-center">Common Questions</h2>
             </div>
-            
+
             <Accordion type="single" collapsible className="w-full space-y-4">
               {/* ✅ 使用 FAQ_DATA 渲染，确保 UI 与 Schema 完全一致 */}
               {FAQ_DATA.map((item, index) => (
@@ -443,13 +444,10 @@ export default function Home() {
               <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-primary/20 transition-all">
                 <CardContent className="p-0">
                   <div className="aspect-video bg-black/20 rounded-t-lg overflow-hidden">
-                    <iframe
-                      className="w-full h-full"
-                      src="https://www.youtube.com/embed/RAbD9QEmWHw"
+                    <YouTubeLite
+                      videoId="RAbD9QEmWHw"
                       title="Deadly Delivery Beginner Guide - Complete Tutorial"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
+                    />
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg font-semibold mb-2">Beginner&apos;s Complete Guide</h3>
@@ -459,17 +457,14 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
-              
+
               <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-primary/20 transition-all">
                 <CardContent className="p-0">
                   <div className="aspect-video bg-black/20 rounded-t-lg overflow-hidden">
-                    <iframe
-                      className="w-full h-full"
-                      src="https://www.youtube.com/embed/VV2ZZ_y43vk"
+                    <YouTubeLite
+                      videoId="VV2ZZ_y43vk"
                       title="Deadly Delivery Advanced Strategies & Tips"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
+                    />
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg font-semibold mb-2">Advanced Strategies & Tips</h3>
@@ -538,7 +533,7 @@ export default function Home() {
 
           {/* Author Bio / E-E-A-T Section */}
           <div className="mt-16 max-w-3xl mx-auto">
-            <AuthorBio 
+            <AuthorBio
               authorName="DeadlyBlox Team"
               authorRole="Deadly Delivery Expert & Code Verifier"
               expertise={["Game Mechanics Analysis", "Code Verification", "Enemy Strategy", "Class Progression"]}
