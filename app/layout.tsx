@@ -55,16 +55,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
         {/* Google AdSense - Using Next.js Script component for better compatibility */}
         <Script
           id="adsbygoogle-init"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2499950673294937"
         />
 
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-4ST6SB4EGB"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
