@@ -51,7 +51,7 @@ export default function LocationDetailPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-background">
-      <main className="container mx-auto px-4 py-10 max-w-4xl">
+      <main className="container mx-auto px-4 py-10 max-w-5xl">
         <Breadcrumbs items={[
           { label: "Locations", href: "/locations" },
           { label: location.name }

@@ -168,56 +168,6 @@ export default function MonstersPage() {
             </p>
           </div>
 
-          {/* Expert Analysis Section - E-E-A-T Content */}
-          < Card className="bg-card/50 backdrop-blur-sm border-white/5 mb-8">
-            <CardContent className="p-8 prose prose-invert max-w-none">
-              <div className="space-y-6 text-muted-foreground">
-                <div>
-                  <h2 className="text-2xl font-bold text-primary mb-3">Understanding Deadly Delivery's Entity System</h2>
-                  <p className="leading-relaxed">
-                    Success in Deadly Delivery requires mastering entity mechanics and counter-strategies. Through over <strong className="text-foreground">100+ hours of documented testing</strong>, our team has compiled comprehensive data on every monster type, including exact damage values, spawn patterns, and optimal counter-methods. This guide represents verified information from deep floor runs (Floor 7+) and extensive solo and team testing.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Threat Tier Analysis</h3>
-                  <p className="mb-3">
-                    Not all entities pose equal danger. Our threat classification system is based on three factors: damage output, counter difficulty, and spawn frequency. <strong className="text-foreground">Extreme threats</strong> like the Bloomaw can instantly end runs on Floor 6+ if unprepared. <strong className="text-foreground">High threats</strong> such as the Forsaken require team coordination but are manageable with proper strategy. <strong className="text-foreground">Medium and Low threats</strong> are primarily resource drains testing your equipment and awareness.
-                  </p>
-                  <p>
-                    Understanding these tiers helps teams allocate resources effectively. Bringing flashlights becomes mandatory for Bloomaw floors, while Baseball Bats provide cost-effective counters to Pit Maws throughout all floor ranges.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Floor Progression and Entity Scaling</h3>
-                  <p className="mb-3">
-                    Entity diversity and spawn rates increase dramatically with floor depth. Floors 1-3 feature primarily Pit Maws and occasional Human Mimics, making them ideal for learning basic counter mechanics. Floors 4-6 introduce the Forsaken and increase Mimic frequency, demanding improved team coordination. Floor 6+ adds the Bloomaw, fundamentally changing survival requirements.
-                  </p>
-                  <p>
-                    Our testing shows that entity spawn rates roughly double between Floor 3 and Floor 6. Deep runs (Floor 7+) can feature 4-6 simultaneous entity threats, requiring full team loadouts and expert-level coordination. New players should master Floors 1-3 entity counters before attempting deeper progression.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Team Coordination Strategies</h3>
-                  <p className="mb-3">
-                    Effective entity management requires designated roles: <strong className="text-foreground">Scout</strong> (flashlight duty, identifies threats early), <strong className="text-foreground">Defender</strong> (handles aggressive entities with weapons), and <strong className="text-foreground">Collector</strong> (focuses on items while protected). Voice communication dramatically improves survival rates - our data shows coordinated teams have 3x better success rates on Floors 5+ compared to silent teams.
-                  </p>
-                  <p>
-                    Critical callouts include entity type, location, and current threat status. Simple phrases like "Forsaken hallway" or "Bloomaw incoming" enable instant team response without confusion.
-                  </p>
-                </div>
-
-                <div className="bg-black/20 border border-primary/20 rounded-lg p-4">
-                  <p className="text-sm">
-                    <strong className="text-foreground">Verification Note:</strong> All damage values, spawn behaviors, and counter-strategies documented here are verified through in-game testing as of November 2025. Our team maintains active gameplay to ensure accuracy as developers release updates. Last verified: December 1, 2025.
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
           {/* Quick Reference Table */}
           <Card className="bg-card/50 backdrop-blur-sm border-white/5 mb-8">
             <CardHeader>
@@ -328,6 +278,56 @@ export default function MonstersPage() {
               </Card>
             ))}
           </div>
+
+          {/* Expert Analysis Section - E-E-A-T Content - Moved Below Monster Cards */}
+          <Card className="bg-card/50 backdrop-blur-sm border-white/5 mt-8 mb-8">
+            <CardContent className="p-8 prose prose-invert max-w-none">
+              <div className="space-y-6 text-muted-foreground">
+                <div>
+                  <h2 className="text-2xl font-bold text-primary mb-3">Understanding Deadly Delivery's Entity System</h2>
+                  <p className="leading-relaxed">
+                    Success in Deadly Delivery requires mastering entity mechanics and counter-strategies. Through over <strong className="text-foreground">100+ hours of documented testing</strong>, our team has compiled comprehensive data on every monster type, including exact damage values, spawn patterns, and optimal counter-methods. This guide represents verified information from deep floor runs (Floor 7+) and extensive solo and team testing.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Threat Tier Analysis</h3>
+                  <p className="mb-3">
+                    Not all entities pose equal danger. Our threat classification system is based on three factors: damage output, counter difficulty, and spawn frequency. <strong className="text-foreground">Extreme threats</strong> like the Bloomaw can instantly end runs on Floor 6+ if unprepared. <strong className="text-foreground">High threats</strong> such as the Forsaken require team coordination but are manageable with proper strategy. <strong className="text-foreground">Medium and Low threats</strong> are primarily resource drains testing your equipment and awareness.
+                  </p>
+                  <p>
+                    Understanding these tiers helps teams allocate resources effectively. Bringing flashlights becomes mandatory for Bloomaw floors, while Baseball Bats provide cost-effective counters to Pit Maws throughout all floor ranges.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Floor Progression and Entity Scaling</h3>
+                  <p className="mb-3">
+                    Entity diversity and spawn rates increase dramatically with floor depth. Floors 1-3 feature primarily Pit Maws and occasional Human Mimics, making them ideal for learning basic counter mechanics. Floors 4-6 introduce the Forsaken and increase Mimic frequency, demanding improved team coordination. Floor 6+ adds the Bloomaw, fundamentally changing survival requirements.
+                  </p>
+                  <p>
+                    Our testing shows that entity spawn rates roughly double between Floor 3 and Floor 6. Deep runs (Floor 7+) can feature 4-6 simultaneous entity threats, requiring full team loadouts and expert-level coordination. New players should master Floors 1-3 entity counters before attempting deeper progression.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Team Coordination Strategies</h3>
+                  <p className="mb-3">
+                    Effective entity management requires designated roles: <strong className="text-foreground">Scout</strong> (flashlight duty, identifies threats early), <strong className="text-foreground">Defender</strong> (handles aggressive entities with weapons), and <strong className="text-foreground">Collector</strong> (focuses on items while protected). Voice communication dramatically improves survival rates - our data shows coordinated teams have 3x better success rates on Floors 5+ compared to silent teams.
+                  </p>
+                  <p>
+                    Critical callouts include entity type, location, and current threat status. Simple phrases like "Forsaken hallway" or "Bloomaw incoming" enable instant team response without confusion.
+                  </p>
+                </div>
+
+                <div className="bg-black/20 border border-primary/20 rounded-lg p-4">
+                  <p className="text-sm">
+                    <strong className="text-foreground">Verification Note:</strong> All damage values, spawn behaviors, and counter-strategies documented here are verified through in-game testing as of November 2025. Our team maintains active gameplay to ensure accuracy as developers release updates. Last verified: December 1, 2025.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Related Content */}
           <Card className="bg-card/50 backdrop-blur-sm border-white/5 mt-8">

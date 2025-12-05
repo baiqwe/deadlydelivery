@@ -56,17 +56,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-        {/* Async font loading - eliminates render-blocking */}
+        {/* Font loading - using onload strategy to avoid render-blocking */}
         <link
-          id="google-fonts"
           href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
-          media="print"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `document.getElementById('google-fonts').media='all'`
-          }}
+          media="all"
         />
       </head>
       <body className={inter.className}>

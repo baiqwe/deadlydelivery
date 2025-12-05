@@ -11,7 +11,7 @@ export const siteConfig = {
   // 导航菜单 - 保留原有的 Codes，添加新的 Wiki 页面
   mainNav: [
     { title: "Home", href: "/" },
-    { title: "Codes", href: "/" }, // 主页就是 Codes 页面
+    { title: "Codes", href: "/codes" }, // 独立的 Codes 页面
     { title: "Monsters", href: "/monsters" }, // 新增：怪物图鉴
     { title: "Classes", href: "/classes" }, // 新增：职业层级列表
     { title: "Items", href: "/items" }, // 新增：物品数据库

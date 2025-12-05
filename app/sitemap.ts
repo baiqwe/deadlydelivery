@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static routes (base paths without locale)
   const baseStaticRoutes = [
     { path: '', priority: 1.0, changeFreq: 'daily' as const },
+    { path: '/codes', priority: 0.9, changeFreq: 'daily' as const },
     { path: '/items', priority: 0.8, changeFreq: 'weekly' as const },
     { path: '/wiki', priority: 0.8, changeFreq: 'daily' as const },
     { path: '/wiki/weapons', priority: 0.7, changeFreq: 'weekly' as const },
@@ -21,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/classes', priority: 0.9, changeFreq: 'weekly' as const },
     { path: '/locations', priority: 0.7, changeFreq: 'weekly' as const },
     { path: '/quests', priority: 0.8, changeFreq: 'weekly' as const },
+    { path: '/about', priority: 0.5, changeFreq: 'monthly' as const },
     { path: '/privacy', priority: 0.3, changeFreq: 'monthly' as const },
     { path: '/terms', priority: 0.3, changeFreq: 'monthly' as const },
     { path: '/contact', priority: 0.5, changeFreq: 'monthly' as const },

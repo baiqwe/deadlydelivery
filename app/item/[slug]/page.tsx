@@ -80,7 +80,7 @@ export default function ItemPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemSchema) }}
       />
       <div className="min-h-screen bg-background">
-        <main className="container mx-auto px-4 py-10 max-w-4xl">
+        <main className="container mx-auto px-4 py-10 max-w-5xl">
           <Breadcrumbs items={[
             { label: "Items", href: "/items" },
             { label: item.name }

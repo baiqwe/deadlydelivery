@@ -71,7 +71,7 @@ export default function GuidePage() {
       </div>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-8 max-w-4xl">
+      <main className="container mx-auto px-4 py-8 max-w-5xl">
         <Breadcrumbs items={[{ label: "Guide" }]} />
         
         <article className="prose prose-invert max-w-none">

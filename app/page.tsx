@@ -34,15 +34,15 @@ import { generateHreflangAlternates } from '@/lib/i18n-utils'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: `${activeCodesCount} Active Deadly Delivery Codes - ${currentMonth}`,
-  description: `Get ${activeCodesCount} active Roblox codes for Deadly Delivery. One-click copy promotional codes and unlock rewards instantly. Updated daily.`,
+  title: "Deadly Delivery Wiki & Complete Game Guide - Codes, Items, Monsters | DeadlyBlox",
+  description: "Complete Deadly Delivery Wiki: active codes, weapons database, items, monsters, classes, and survival guides. Expert-written guides with 100+ hours of gameplay experience.",
   alternates: {
     canonical: "/",
     languages: generateHreflangAlternates('/'),
   },
   openGraph: {
-    title: `${activeCodesCount} Active Deadly Delivery Codes - ${currentMonth}`,
-    description: `Get ${activeCodesCount} active Roblox codes for Deadly Delivery. Updated daily.`,
+    title: "Deadly Delivery Wiki & Complete Game Guide - DeadlyBlox",
+    description: "Complete Deadly Delivery Wiki: codes, items, monsters, and expert guides. Your ultimate resource for mastering the game.",
     url: baseUrl,
     alternateLocale: ['pt-BR'],
   },
@@ -182,13 +182,13 @@ export default function Home() {
         {/* Auto Locale Detection */}
         <ClientAutoLocale />
 
-        {/* Hero Section */}
-        <section className="relative py-16 md:py-24 px-4 text-center overflow-hidden">
+        {/* Hero Section - Compact */}
+        <section className="relative py-8 md:py-12 px-4 text-center overflow-hidden">
           {/* 背景光效装饰 */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
           <div className="container mx-auto max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/30 text-secondary-foreground text-sm font-medium mb-6 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/30 text-secondary-foreground text-sm font-medium mb-4 animate-fade-in">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
@@ -196,19 +196,34 @@ export default function Home() {
               Updated for November 2025
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-horror text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 mb-6 drop-shadow-sm">
-              Deadly Delivery <br /> <span className="text-primary">Codes & Wiki</span>
+            <h1 className="text-4xl md:text-5xl font-horror text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 mb-4 drop-shadow-sm">
+              Deadly Delivery <br /> <span className="text-primary">Wiki & Guides</span>
             </h1>
 
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              Don&apos;t get caught by the monsters empty-handed. Grab the latest active codes for
-              <strong className="text-primary mx-1">Coins</strong>,
-              <strong className="text-secondary mx-1">Weapons</strong>, and
-              <strong className="text-primary mx-1">Revives</strong> instantly.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed">
+              Your ultimate resource for mastering Deadly Delivery. Expert guides, complete databases, active codes, and survival strategies.
             </p>
 
-            <div className="max-w-md mx-auto">
-              <UpdateBanner />
+            {/* Prominent Code Access Buttons - Reference Layout Style */}
+            <div className="flex flex-wrap justify-center gap-3 mt-6 mb-4">
+              <Link href="/codes">
+                <Button size="lg" className="h-12 px-6 text-base font-bold bg-primary hover:bg-primary/90 text-black gap-2 shadow-lg shadow-primary/30">
+                  <Gift className="w-5 h-5" />
+                  Active Codes {activeCodesCount} Available
+                </Button>
+              </Link>
+              <Link href="/monsters">
+                <Button size="lg" variant="outline" className="h-12 px-6 text-base font-semibold border-2 hover:border-primary/50 gap-2">
+                  <Shield className="w-5 h-5" />
+                  Monsters Database
+                </Button>
+              </Link>
+              <Link href="/classes">
+                <Button size="lg" variant="outline" className="h-12 px-6 text-base font-semibold border-2 hover:border-primary/50 gap-2">
+                  <Users className="w-5 h-5" />
+                  Classes Tier List
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
@@ -216,49 +231,91 @@ export default function Home() {
         {/* Main Content Area */}
         <main className="container mx-auto px-4 pb-16 flex-1">
 
-          <div className="max-w-3xl mx-auto">
-            <Breadcrumbs items={[{ label: "Codes" }]} />
-            <CodesList codes={codesData} />
-
-            {/* Social Share */}
-            <div className="mt-8">
-              <SocialShare title="Deadly Delivery Codes" />
+          {/* Latest Updates Section - Reference Layout Style */}
+          <section className="mt-6 max-w-5xl mx-auto mb-12">
+            <div className="flex items-center gap-3 mb-4 justify-center">
+              <div className="relative">
+                <div className="w-3 h-3 bg-red-500 rounded-full absolute -top-1 -right-1 animate-pulse"></div>
+                <TrendingUp className="w-6 h-6 text-primary" />
+              </div>
+              <h2 className="text-3xl font-bold">Latest Updates</h2>
             </div>
-
-            {/* Internal Link to Guide */}
-            <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-primary/20 transition-all duration-300 mt-8">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/10 text-primary shrink-0">
-                    <HelpCircle className="w-6 h-6" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-bold mb-2">Need Help?</h3>
-                    <p className="text-muted-foreground mb-4">
-                      Don&apos;t know how to redeem codes? Check out our complete{" "}
-                      <Link href="/guide" className="text-primary hover:underline font-medium">
-                        Deadly Delivery Guide & Wiki
-                      </Link>{" "}
-                      with step-by-step instructions, gameplay tips, and more!
+            <div className="grid md:grid-cols-3 gap-4">
+              {/* Codes Update Card */}
+              <Link href="/codes">
+                <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-primary/20 transition-all duration-300 h-full cursor-pointer group">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="px-2 py-1 text-xs font-bold rounded bg-primary/20 text-primary border border-primary/30">
+                        CODES
+                      </span>
+                      <span className="text-xs text-muted-foreground">Updated Today</span>
+                    </div>
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                      New Codes Available!
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">
+                      We found {activeCodesCount} active codes for Coins, Weapons, and Revive Syringes. Click to redeem them now.
                     </p>
-                    <Link href="/guide">
-                      <Button variant="outline" size="sm">
-                        View Guide
-                        <ChevronRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                  </CardContent>
+                </Card>
+              </Link>
 
-          {/* Wiki Quick Links - Enhanced with FeatureCard */}
-          <div className="mt-16 max-w-5xl mx-auto">
-            <div className="flex items-center gap-3 mb-6 justify-center">
-              <Gamepad2 className="w-6 h-6 text-primary" />
-              <h2 className="text-3xl font-bold text-center">Wiki Databases</h2>
+              {/* Monsters Tier List Card */}
+              <Link href="/monsters">
+                <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-primary/20 transition-all duration-300 h-full cursor-pointer group">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="px-2 py-1 text-xs font-bold rounded bg-secondary/20 text-secondary border border-secondary/30">
+                        MONSTERS
+                      </span>
+                    </div>
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                      Complete Monster Database
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">
+                      Explore all enemies, their stats, attack patterns, and counter-strategies. Master the bestiary.
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              {/* Classes Guide Card */}
+              <Link href="/classes">
+                <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-primary/20 transition-all duration-300 h-full cursor-pointer group">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="px-2 py-1 text-xs font-bold rounded bg-secondary/20 text-secondary border border-secondary/30">
+                        CLASSES
+                      </span>
+                    </div>
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                      Classes Tier List
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">
+                      Which class is S-Tier? Check the complete ranking and unlock requirements for all classes.
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
             </div>
+          </section>
+
+          {/* Wiki Quick Links - Moved Up, Enhanced with FeatureCard */}
+          <div className="mt-8 max-w-5xl mx-auto">
+            <div className="flex items-center gap-3 mb-6 justify-center">
+              <Gamepad2 className="w-7 h-7 text-primary" />
+              <h2 className="text-3xl font-bold text-center">Game Databases & Resources</h2>
+            </div>
+            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Explore complete databases, expert guides, and comprehensive resources to master Deadly Delivery.
+            </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               <FeatureCard
                 title="Items Database"
@@ -285,150 +342,6 @@ export default function Home() {
                 href="/guides"
               />
             </div>
-          </div>
-
-          {/* SEO Content Grid - 更加精良的排版 */}
-          <div className="mt-20 grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-
-            {/* How to Redeem - Step by Step */}
-            <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-primary/20 transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                    <Settings className="w-6 h-6" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold">How to Redeem?</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ol className="space-y-4">
-                  {[
-                    "Launch Deadly Delivery on Roblox.",
-                    "Tap the Settings (Gear icon) at the top.",
-                    "Find the text box labeled 'Enter Code'.",
-                    "Paste a code and click Redeem."
-                  ].map((step, i) => (
-                    <li key={i} className="flex gap-4 items-start group">
-                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-muted flex items-center justify-center text-sm font-bold text-muted-foreground group-hover:bg-primary group-hover:text-black transition-colors">
-                        {i + 1}
-                      </span>
-                      <p className="text-muted-foreground pt-1 group-hover:text-foreground transition-colors">{step}</p>
-                    </li>
-                  ))}
-                </ol>
-              </CardContent>
-            </Card>
-
-            {/* Rewards Info */}
-            <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-secondary/20 transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 rounded-lg bg-secondary/10 text-secondary">
-                    <Gift className="w-6 h-6" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold">Code Rewards</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-6">
-                  Codes are essential for survival. They provide free resources that would otherwise cost Robux or hours of grinding.
-                </p>
-                <ul className="grid grid-cols-1 gap-3">
-                  {[
-                    { icon: "💰", text: "Coins for upgrades" },
-                    { icon: "💉", text: "Revive Syringes (Life Savers)" },
-                    { icon: "🔫", text: "Z-Ray Guns & Weapons" },
-                    { icon: "🎃", text: "Exclusive Seasonal Items" }
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 p-3 rounded-md bg-black/20 border border-white/5">
-                      <span className="text-xl">{item.icon}</span>
-                      <span className="font-medium">{item.text}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Comprehensive Game Introduction Section - E-E-A-T Content */}
-          <section className="mt-20 max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-8 justify-center">
-              <Gamepad2 className="w-7 h-7 text-primary" />
-              <h2 className="text-3xl font-bold text-center">About Deadly Delivery: Complete Game Overview</h2>
-            </div>
-
-            <Card className="bg-card/50 backdrop-blur-sm border-white/5 mb-8">
-              <CardContent className="p-8 prose prose-invert max-w-none">
-                <div className="space-y-6 text-foreground">
-                  <p className="text-lg leading-relaxed">
-                    <strong>Deadly Delivery</strong> is a thrilling co-operative survival horror game developed by <strong>Flat Head Studio</strong> on the Roblox platform.
-                    Players work together as delivery workers navigating treacherous sewer systems, collecting food items to fill a &quot;Money Bar&quot;
-                    while evading deadly entities that lurk in the darkness.
-                  </p>
-
-                  <div>
-                    <h3 className="text-2xl font-bold text-primary mb-3">Core Gameplay Mechanics</h3>
-                    <p className="mb-4">
-                      The game features a unique elevator-based progression system. Teams vote whether to go &quot;Deep&quot; (more dangerous floors with better loot)
-                      or &quot;Evacuate&quot; (bank current earnings and end the run). Each player has a 4-slot inventory, requiring strategic item management
-                      and frequent returns to the elevator to deposit collected food items.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-2xl font-bold text-primary mb-3">Enemies & Threats</h3>
-                    <p className="mb-4">
-                      Deadly Delivery features a diverse bestiary of dangerous entities. From the <strong>Pit Maw</strong> (floor traps dealing 30 damage)
-                      to the <strong>Bloomaw</strong> (a shape-shifting cat monster found after Floor 6), each enemy requires specific counter-strategies.
-                      The <strong>Forsaken</strong> deals 40 instant damage if you break eye contact, while <strong>Mimics</strong> disguise as players or objects.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-2xl font-bold text-primary mb-3">Classes & Progression</h3>
-                    <p className="mb-4">
-                      Players can unlock specialized classes: <strong>Baseballer</strong> (requires 1000 bat damage + $12,000 coins),
-                      <strong>Porter</strong> (3500 feet movement + $30,000 coins), and <strong>Veteran</strong> (advanced progression).
-                      Each class offers unique advantages, such as starting weapons or enhanced carrying capacity.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-2xl font-bold text-primary mb-3">Why This Guide Exists</h3>
-                    <p className="mb-4">
-                      This website was created by dedicated Deadly Delivery players with <strong>100+ hours of gameplay experience</strong>.
-                      Our team manually verifies every code, tests strategies against each enemy type, and maintains accurate data on items, weapons,
-                      and locations. We update our content regularly based on in-game testing and community feedback.
-                    </p>
-                    <p className="text-muted-foreground italic">
-                      <strong>Last verified:</strong> November 2025. All codes and information are tested in-game before publication.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* FAQ Section - Full Width */}
-          <div className="mt-16 max-w-3xl mx-auto">
-            <div className="flex items-center gap-3 mb-6 justify-center">
-              <HelpCircle className="w-6 h-6 text-primary" />
-              <h2 className="text-3xl font-bold text-center">Common Questions</h2>
-            </div>
-
-            <Accordion type="single" collapsible className="w-full space-y-4">
-              {/* ✅ 使用 FAQ_DATA 渲染，确保 UI 与 Schema 完全一致 */}
-              {FAQ_DATA.map((item, index) => (
-                <AccordionItem key={index} value={`item-${index + 1}`} className="border border-white/10 rounded-lg bg-card/30 px-4">
-                  <AccordionTrigger className="text-lg font-medium hover:no-underline hover:text-primary text-left">
-                    {item.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-base pb-4">
-                    {item.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
           </div>
 
           {/* Video Tutorials Section */}
@@ -531,14 +444,120 @@ export default function Home() {
             </div>
           </section>
 
+          {/* Comprehensive Game Introduction Section - Moved Down, E-E-A-T Content */}
+          <section className="mt-12 max-w-5xl mx-auto">
+            <div className="flex items-center gap-3 mb-8 justify-center">
+              <Gamepad2 className="w-7 h-7 text-primary" />
+              <h2 className="text-3xl font-bold text-center">About Deadly Delivery: Complete Game Overview</h2>
+            </div>
+
+            <Card className="bg-card/50 backdrop-blur-sm border-white/5 mb-8">
+              <CardContent className="p-8 prose prose-invert max-w-none">
+                <div className="space-y-6 text-foreground">
+                  <p className="text-lg leading-relaxed">
+                    <strong>Deadly Delivery</strong> is a thrilling co-operative survival horror game developed by <strong>Flat Head Studio</strong> on the Roblox platform.
+                    Players work together as delivery workers navigating treacherous sewer systems, collecting food items to fill a &quot;Money Bar&quot;
+                    while evading deadly entities that lurk in the darkness.
+                  </p>
+
+                  <div>
+                    <h3 className="text-2xl font-bold text-primary mb-3">Core Gameplay Mechanics</h3>
+                    <p className="mb-4">
+                      The game features a unique elevator-based progression system. Teams vote whether to go &quot;Deep&quot; (more dangerous floors with better loot)
+                      or &quot;Evacuate&quot; (bank current earnings and end the run). Each player has a 4-slot inventory, requiring strategic item management
+                      and frequent returns to the elevator to deposit collected food items.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-bold text-primary mb-3">Enemies & Threats</h3>
+                    <p className="mb-4">
+                      Deadly Delivery features a diverse bestiary of dangerous entities. From the <strong>Pit Maw</strong> (floor traps dealing 30 damage)
+                      to the <strong>Bloomaw</strong> (a shape-shifting cat monster found after Floor 6), each enemy requires specific counter-strategies.
+                      The <strong>Forsaken</strong> deals 40 instant damage if you break eye contact, while <strong>Mimics</strong> disguise as players or objects.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-bold text-primary mb-3">Classes & Progression</h3>
+                    <p className="mb-4">
+                      Players can unlock specialized classes: <strong>Baseballer</strong> (requires 1000 bat damage + $12,000 coins),
+                      <strong>Porter</strong> (3500 feet movement + $30,000 coins), and <strong>Veteran</strong> (advanced progression).
+                      Each class offers unique advantages, such as starting weapons or enhanced carrying capacity.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-bold text-primary mb-3">Why This Guide Exists</h3>
+                    <p className="mb-4">
+                      This website was created by dedicated Deadly Delivery players with <strong>100+ hours of gameplay experience</strong>.
+                      Our team manually verifies every code, tests strategies against each enemy type, and maintains accurate data on items, weapons,
+                      and locations. We update our content regularly based on in-game testing and community feedback.
+                    </p>
+                    <p className="text-muted-foreground italic">
+                      <strong>Last verified:</strong> November 2025. All codes and information are tested in-game before publication.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
           {/* Author Bio / E-E-A-T Section */}
-          <div className="mt-16 max-w-3xl mx-auto">
+          <div className="mt-16 max-w-5xl mx-auto">
             <AuthorBio
               authorName="DeadlyBlox Team"
               authorRole="Deadly Delivery Expert & Code Verifier"
               expertise={["Game Mechanics Analysis", "Code Verification", "Enemy Strategy", "Class Progression"]}
               experience="100+ hours of verified gameplay experience"
             />
+          </div>
+
+          {/* Quick Access to Codes - Moved to Bottom, Compact Section */}
+          <div className="mt-20 max-w-5xl mx-auto">
+            <Card className="bg-card/50 backdrop-blur-sm border-white/5 hover:border-primary/20 transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between flex-wrap gap-4">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <Gift className="w-6 h-6 text-primary" />
+                      <h2 className="text-2xl font-bold">Looking for Active Codes?</h2>
+                      <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold">
+                        {activeCodesCount} Active
+                      </span>
+                    </div>
+                    <p className="text-muted-foreground">
+                      Get free rewards instantly with verified promotional codes, complete redemption guide, and comprehensive FAQ.
+                    </p>
+                  </div>
+                  <Link href="/codes">
+                    <Button size="lg" className="gap-2">
+                      View All Codes & Guide
+                      <ChevronRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* FAQ Section - Simplified, Links to Codes Page */}
+          <div className="mt-12 max-w-5xl mx-auto mb-8">
+            <div className="flex items-center gap-3 mb-6 justify-center">
+              <HelpCircle className="w-6 h-6 text-primary" />
+              <h2 className="text-2xl font-bold text-center">Questions About Codes?</h2>
+            </div>
+            <p className="text-center text-muted-foreground mb-6">
+              Check out our comprehensive codes page for detailed answers, step-by-step redemption guide, and FAQ.
+            </p>
+            <div className="text-center">
+              <Link href="/codes">
+                <Button size="lg" variant="outline" className="gap-2">
+                  View Complete Code Guide & FAQ
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
 
           {/* Comments Section - Temporarily hidden */}

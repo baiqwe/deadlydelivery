@@ -38,7 +38,7 @@ export default function PortuguesePage() {
       <section className="relative py-16 md:py-24 px-4 text-center overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10 pointer-events-none" />
         
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-5xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/30 text-secondary-foreground text-sm font-medium mb-6 animate-fade-in">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
@@ -67,7 +67,7 @@ export default function PortuguesePage() {
       {/* Main Content Area */}
       <main className="container mx-auto px-4 pb-16 flex-1">
         
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-4 flex items-center gap-3">
               <Gift className="w-8 h-8 text-primary" />
