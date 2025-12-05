@@ -168,30 +168,34 @@ body {
 }
 
 /* Ad Container - Prevent Layout Shift (CLS) */
+/* 防止广告加载时页面跳动，设置固定最小高度 */
+.ad-slot-placeholder,
 .ad-container {
-  min-height: 280px;
-  width: 100%;
+  min-height: 280px; /* 根据广告尺寸设置，通常是 250px 或 280px */
+  background-color: rgba(243, 244, 246, 0.05); /* 浅灰色背景，让用户知道这里会加载内容，且不会引起跳动 */
   display: flex;
-  align-items: center;
   justify-content: center;
-  background: rgba(217, 217, 217, 0.05);
-  /* Subtle placeholder */
+  align-items: center;
+  margin: 20px 0;
   border-radius: 0.5rem;
   transition: background 0.3s ease;
 }
 
-.ad-container.loaded {
+.ad-container.loaded,
+.ad-slot-placeholder.loaded {
   background: transparent;
   min-height: auto;
 }
 
 /* Ad placeholder for better UX */
-.ad-container::before {
+.ad-container::before,
+.ad-slot-placeholder::before {
   content: '';
   display: block;
   opacity: 0.3;
 }
 
-.ad-container.loaded::before {
+.ad-container.loaded::before,
+.ad-slot-placeholder.loaded::before {
   display: none;
 }

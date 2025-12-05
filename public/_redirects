@@ -2,13 +2,12 @@
 # This file handles URL normalization and redirects
 # Format: <source> <destination> <status_code>
 
-# Trailing slash normalization - redirect all trailing slashes to non-trailing slash versions
-# This prevents duplicate content issues with Google
+# Force HTTPS
+http://www.deadlyblox.com/* https://www.deadlyblox.com/:splat 301!
 
-/*/ /:splat 301
-
-# Note: The above rule will redirect any URL with a trailing slash to the same URL without it
-# For example: /wiki/ -> /wiki, /items/ -> /items, etc.
+# Trailing slash normalization - redirect all URLs without trailing slash to versions with trailing slash
+# This prevents duplicate content issues and matches Next.js trailingSlash: true config
+# Note: This works with next.config.js trailingSlash: true to ensure consistent URL structure
 
 # If you have any old URLs that need to redirect to new ones, add them below:
 # /old-page /new-page 301
