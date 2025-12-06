@@ -44,8 +44,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   })
   
   // Also include legacy /pt route for backward compatibility
+  // ✅ SEO Fix: Ensure trailing slash for consistency
   staticRoutes.push({
-    url: `${baseUrl}/pt`,
+    url: `${baseUrl}/pt/`,
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 0.9,

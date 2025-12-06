@@ -167,11 +167,12 @@ body {
   animation: fade-in 0.6s ease-out;
 }
 
-/* Ad Container - Prevent Layout Shift (CLS) */
-/* 防止广告加载时页面跳动，设置固定最小高度 */
+/* Ad Container - Prevent Layout Shift (CLS) - SEO Critical Fix */
+/* ✅ SEO Fix: Fixed min-height prevents CLS which severely impacts rankings */
+/* 防止广告加载时页面跳动，设置固定最小高度 - 这是 SEO 关键修复 */
 .ad-slot-placeholder,
 .ad-container {
-  min-height: 280px; /* 根据广告尺寸设置，通常是 250px 或 280px */
+  min-height: 280px !important; /* ✅ Critical: Always maintain min-height to prevent CLS */
   background-color: rgba(243, 244, 246, 0.05); /* 浅灰色背景，让用户知道这里会加载内容，且不会引起跳动 */
   display: flex;
   justify-content: center;
@@ -179,12 +180,18 @@ body {
   margin: 20px 0;
   border-radius: 0.5rem;
   transition: background 0.3s ease;
+  /* ✅ SEO Fix: Ensure container maintains size even after ad loads */
+  width: 100%;
+  position: relative;
 }
 
+/* ✅ SEO Fix: DO NOT remove min-height after loading - this causes CLS */
+/* Keep the min-height to maintain layout stability */
 .ad-container.loaded,
 .ad-slot-placeholder.loaded {
   background: transparent;
-  min-height: auto;
+  /* ✅ Critical: Keep min-height to prevent layout shift */
+  min-height: 280px !important;
 }
 
 /* Ad placeholder for better UX */
@@ -198,4 +205,21 @@ body {
 .ad-container.loaded::before,
 .ad-slot-placeholder.loaded::before {
   display: none;
+}
+
+/* ✅ SEO Fix: Mobile-specific ad container optimization */
+/* Ensure ads don't push main content below fold on mobile */
+@media (max-width: 768px) {
+  .ad-container,
+  .ad-slot-placeholder {
+    min-height: 250px !important; /* Slightly smaller on mobile */
+    margin: 16px 0;
+  }
+  
+  /* ✅ Critical: Prevent large ads above fold on mobile (Better Ads Standards violation) */
+  /* If ad is in first viewport, reduce size */
+  .ad-container:first-of-type,
+  .ad-slot-placeholder:first-of-type {
+    min-height: 200px !important;
+  }
 }

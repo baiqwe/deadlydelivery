@@ -67,16 +67,24 @@ export function removeLocalePrefix(pathname: string): string {
 
 /**
  * Get the full URL for a specific locale and path
+ * ✅ SEO Fix: Ensures all URLs end with trailing slash to match next.config.js trailingSlash: true
+ * This prevents sitemap inconsistencies and redirect loops
  */
 export function getLocalizedUrl(locale: Locale, path: string, baseUrl: string): string {
   // Remove locale prefix from path first
   const pathWithoutLocale = removeLocalePrefix(path)
-  const cleanPath = pathWithoutLocale === '/' ? '' : pathWithoutLocale
+  let cleanPath = pathWithoutLocale === '/' ? '' : pathWithoutLocale
+  
+  // ✅ SEO Fix: Force trailing slash (unless root path)
+  // This matches next.config.js trailingSlash: true configuration
+  if (cleanPath && !cleanPath.endsWith('/')) {
+    cleanPath += '/'
+  }
   
   if (locale === defaultLocale) {
-    return cleanPath ? `${baseUrl}${cleanPath}` : baseUrl
+    return cleanPath ? `${baseUrl}${cleanPath}` : `${baseUrl}/`
   }
-  return cleanPath ? `${baseUrl}/${locale}${cleanPath}` : `${baseUrl}/${locale}`
+  return cleanPath ? `${baseUrl}/${locale}${cleanPath}` : `${baseUrl}/${locale}/`
 }
 
 /**
