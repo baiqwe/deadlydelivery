@@ -67,24 +67,36 @@ export function removeLocalePrefix(pathname: string): string {
 
 /**
  * Get the full URL for a specific locale and path
- * ✅ SEO Fix: Ensures all URLs end with trailing slash to match next.config.js trailingSlash: true
- * This prevents sitemap inconsistencies and redirect loops
+ * ✅ 核心修复：强制添加 trailing slash 以匹配 next.config.js 的配置
+ * 修复 Sitemap 和 Hreflang URL 一致性问题，防止 301 重定向
  */
 export function getLocalizedUrl(locale: Locale, path: string, baseUrl: string): string {
   // Remove locale prefix from path first
   const pathWithoutLocale = removeLocalePrefix(path)
   let cleanPath = pathWithoutLocale === '/' ? '' : pathWithoutLocale
   
-  // ✅ SEO Fix: Force trailing slash (unless root path)
-  // This matches next.config.js trailingSlash: true configuration
+  // ✅ 核心修复：如果路径不为空且不以斜杠结尾，强制加斜杠
+  // 这确保了所有非根路径的 URL 都以斜杠结尾，匹配 trailingSlash: true
   if (cleanPath && !cleanPath.endsWith('/')) {
     cleanPath += '/'
   }
-  
+
+  // 处理根路径的情况，确保 baseUrl 后面的拼接逻辑正确
+  // 如果是默认语言 (en)
   if (locale === defaultLocale) {
+    // 如果 cleanPath 为空（首页），返回 baseUrl/ (匹配 trailingSlash: true)
+    // 如果 cleanPath 有值（内页），返回 baseUrl + /path/
     return cleanPath ? `${baseUrl}${cleanPath}` : `${baseUrl}/`
   }
-  return cleanPath ? `${baseUrl}/${locale}${cleanPath}` : `${baseUrl}/${locale}/`
+  
+  // 如果是其他语言 (pt-br)
+  // 首页返回 baseUrl/pt-br/ (带斜杠)
+  // 内页返回 baseUrl/pt-br/path/ (带斜杠)
+  if (!cleanPath) {
+    return `${baseUrl}/${locale}/`
+  }
+  
+  return `${baseUrl}/${locale}${cleanPath}`
 }
 
 /**
